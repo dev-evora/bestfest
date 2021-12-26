@@ -1,0 +1,173 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Страница блюда' %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2>Канапе артишок с подкопченой курицей и болгарским перцем</h2>
+  </div>
+</section>
+
+<section class="card">
+  <div class="container">
+    <div class="card-tags">
+      <div class="card-tags__section">
+        <b>Кухня</b>
+        <ul>
+          <li>Авторская</li>
+        </ul>
+      </div>
+      <div class="card-tags__section">
+        <b>Повод</b>
+        <ul>
+          <li>Фуршет</li>
+          <li>Кофебрейк</li>
+        </ul>
+      </div>
+      <div class="card-tags__section">
+        <b>Питание</b>
+        <ul>
+          <li>Вегетарианское</li>
+          <li>Без лактозы</li>
+          <li>Диетическое</li>
+        </ul>
+      </div>
+      <div class="card-tags__section">
+        <b>Для кого</b>
+        <ul>
+          <li>Женщины</li>
+          <li>Дети</li>
+        </ul>
+      </div>
+      <div class="card-tags__section">
+        <b>Тип готовки</b>
+        <ul>
+          <li>Копчение</li>
+        </ul>
+      </div>
+      <div class="card-tags__section">
+        <b>Упаковка</b>
+        <ul>
+          <li>Общая</li>
+        </ul>
+      </div>
+      <div class="card-tags__section">
+        <b>Температура</b>
+        <ul>
+          <li>Холодное</li>
+        </ul>
+      </div>
+      <div class="card-tags__section">
+        <b>Количество персон</b>
+        <ul>
+          <li>10</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-wrap">
+      <div class="card-photo">
+        <div class="card-photo-layout">
+          <div class="card-photo-time">Заказ за 36 часов до мероприятия</div>
+          <div class="card-photo-new">Новинка!</div>
+          <div class="card-photo-energy">На 100г.: 380 г<br> 10 шт.</div>
+        </div>
+        <div class="card-photo-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/content/item.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card-info__main">
+          <div class="card-price">
+            <h3><span class="current-price">1030</span> ₽ / чел.</h3>
+            <h4>1500 ₽ / чел.</h4>
+          </div>
+          <div class="card-person">
+            <b>Количество персон</b>
+            <label>
+              <input type="radio" name="person" value="5" checked />
+              <p>5</p>
+            </label>
+            <label>
+              <input type="radio" name="person" value="10" />
+              <p>10</p>
+            </label>
+            <label>
+              <input type="radio" name="person" value="15" />
+              <p>15</p>
+            </label>
+            <label>
+              <input type="radio" name="person" value="25" />
+              <p>25</p>
+            </label>
+            <label>
+              <input type="radio" name="person" value="30" />
+              <p>30</p>
+            </label>
+            <label>
+              <input type="radio" name="person" value="40" />
+              <p>40</p>
+            </label>
+            <label>
+              <input type="radio" name="person" value="50" />
+              <p>50</p>
+            </label>
+            <label>
+              <input type="radio" name="person" value="100" />
+              <p>100</p>
+            </label>
+            <h3><span class="total-price">1030</span> ₽ / чел.</h3>
+          </div>
+          <ul class="card-energy">
+            <li><p>На 100 гр.</p></li>
+            <li>Белки: 23</li>
+            <li>Жиры: 15</li>
+            <li>Углеводы: 34</li>
+            <li class="full">
+              <p>Количество штук в наборе: 380г. 10 шт.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="card-info__btn">
+          <a href="#" class="item-buy">В корзину</a>
+          <a href="#" class="card-edit">Изменить состав</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="card-content">
+  <div class="container">
+    <div class="card-main">
+      <div class="card-text">
+        <h3>Описание</h3>
+        <p>Подкопченое куриное филе, ломтик болгарского перца и нежная сердцевинка артишока на гренке из свежего пшеничного хлеба.</p>
+      </div>
+      <div class="card-text">
+        <h3>Состав</h3>
+        <p>Перец сладкий, Сыр сливочный, Куриное филе, Хлеб тостовый, Артишок</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="card-rec">
+  <div class="container">
+    <h2>Так же вы можете попробовать:</h2>
+    <div class="row">
+      {% include 'common/item.html' %}
+      {% include 'common/item.html' %}
+      {% include 'common/item.html' %}
+      {% include 'common/item.html' %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

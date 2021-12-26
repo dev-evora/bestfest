@@ -1,0 +1,87 @@
+.footer
+  background: linear-gradient(180deg, #A5B96E 0%, #88985D 100%)
+  color: #fff
+  padding-bottom: 80px
+  .container
+    @include flexbox
+    align-items: flex-start
+    justify-content: space-between
+  &-menu
+    margin-top: 40px
+    &:first-child
+      margin-top: 56px
+    b
+      display: block
+      width: 150px
+      padding-bottom: 15px
+      border-bottom: 1px solid #fff
+    li
+      font-size: 14px
+      margin-top: 15px
+      font-weight: 300
+      a
+        transition: .2s
+        border-bottom: 1px solid transparent
+        &:hover
+          color: #000
+          border-bottom: 1px solid #000
+  &-contact
+    margin-top: 40px
+    li
+      font-size: 12px
+      margin-top: 15px
+      font-weight: 300
+      a
+        transition: .2s
+        border-bottom: 1px solid transparent
+        &:hover
+          color: #000
+          border-bottom: 1px solid #000
+    &__phone
+      font-size: 24px !important
+    &__email
+      margin-top: 5px !important
+      margin-bottom: 45px
+      font-size: 14px !important
+    &__copy
+      margin-top: 25px !important
+
+  &-constructor
+    @include flexbox
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 110px
+    height: 90px
+    text-align: center
+    background: #758842
+    font-size: 12px
+    font-weight: 600
+    p
+      margin-top: 4px
+
+  &-nav
+    margin-top: 35px
+    margin-bottom: 65px
+    display: block
+    li
+      margin-top: 25px
+      font-size: 16px
+      font-weight: 600
+      a
+        transition: .2s
+        border-bottom: 1px solid transparent
+        &:hover
+          color: #000
+          border-bottom: 1px solid #000
+
+  &-icons
+    @include flexbox
+    align-items: center
+    margin-top: 25px
+    li
+      margin-right: 20px
+      &:last-child
+        margin-right: 0
+    a
+      display: block

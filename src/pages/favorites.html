@@ -1,0 +1,48 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Избранное' %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2>Избранное</h2>
+  </div>
+</section>
+
+<section class="favorites">
+  <div class="container">
+    <ul class="favorites-tabs">
+      <li data-id="1">Блюда</li>
+      <li data-id="2">Наборы</li>
+      <li data-id="3">Услуги</li>
+    </ul>
+    <div class="favorites-tab" data-id="1">
+      <div class="favorites-list">
+        {% include 'common/item.html' %}
+        {% include 'common/item.html' %}
+        {% include 'common/item.html' %}
+        {% include 'common/item.html' %}
+        {% include 'common/item.html' %}
+      </div>
+    </div>
+    <div class="favorites-tab" data-id="2">
+      <div class="favorites-list">
+        {% include 'common/item.html' %}
+        {% include 'common/item.html' %}
+      </div>
+    </div>
+    <div class="favorites-tab" data-id="3">
+      <div class="favorites-list">
+        {% include 'common/item.html' %}
+        {% include 'common/item.html' %}
+        {% include 'common/item.html' %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

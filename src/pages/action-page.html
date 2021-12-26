@@ -1,0 +1,31 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Страница акции' %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2>Скидка -15% на кофебрейки</h2>
+  </div>
+</section>
+
+<section class="action-page">
+  <div class="container">
+    <img src="img/content/action.jpg" alt="" class="action-page__img">
+    <div class="action-text">
+      <h3>С 1 по 31 июня 2021 года</h3>
+      <p>Сделайте заказ на кофебрейк на сумму от 10 000 р. и получите скидку 15%.</p>
+      <p>Подробности акции находятся прямо тут, вы читаете их, пока читаетет этот текст.</p>
+    </div>
+    <div class="btn-wrap">
+      <a href="#" class="btn btn-green">Подобрать блюда</a>
+      <a href="#" class="btn btn-pink">Подобрать готовый набор</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

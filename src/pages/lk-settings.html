@@ -1,0 +1,62 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Личный кабинет - Настройки' %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2>Личный кабинет</h2>
+  </div>
+</section>
+
+<section class="lk-top">
+  <div class="container">
+    <div class="lk-top__user">
+      <img src="img/content/user.jpg" alt="">
+      <p>Василий Иванов</p>
+    </div>
+    <ul class="lk-top__nav">
+      <li><a href="#"><img src="img/svg/lk-setting.svg" alt=""><b>Настройки аккаунта</b></a></li>
+      <li><a href="#"><img src="img/svg/lk-exit.svg" alt=""><b>Выйти</b></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="lk-list">
+  <div class="container">
+    <h2 style="color:#788E39;">Настройки</h2>
+    <form class="lk-setting">
+      <div class="lk-setting__col">
+        <h3>Контактные данные</h3>
+        <input type="text" class="input" placeholder="Ваше ФИО*" />
+        <input type="tel" class="input masked" placeholder="Телефон*" />
+        <input type="email" class="input" placeholder="E-mail*" />
+        <h3>Смена пароля</h3>
+        <input type="password" class="input" placeholder="Текущий пароль" />
+        <input type="password" class="input" placeholder="Новый пароль" />
+        <input type="password" class="input" placeholder="Повторите новый пароль" />
+      </div>
+      <div class="lk-setting__col">
+        <h3>Фотография профиля</h3>
+        <input type="file" />
+        <h3>Доставка</h3>
+        <input type="text" class="input" placeholder="Населенный пункт*" />
+        <input type="text" class="input" placeholder="Улица" />
+        <div class="input-row">
+          <input type="text" class="input" placeholder="Дом" />
+          <input type="text" class="input" placeholder="Корпус" />
+          <input type="text" class="input" placeholder="Лит." />
+          <input type="text" class="input" placeholder="Пом." />
+        </div>
+        <textarea class="textarea" placeholder="Комментрий к адресу"></textarea>
+        <div class="btn-wrap"><button class="btn btn-green">Применить</button></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,190 @@
+.action
+  margin-top: 55px
+  &-thumbs
+    overflow: hidden
+    position: absolute
+    top: 10px
+    right: 60px
+    z-index: 100
+    width: 440px
+    .swiper-slide
+      @include flexbox
+      align-items: center
+      height: 180px
+      cursor: pointer
+      img
+        width: 100%
+        height: 60px
+        object-fit: cover
+        object-position: center
+      p
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        text-align: center
+        font-weight: 300
+        opacity: 0
+    .swiper-slide-active
+      p
+        opacity: 1
+      img
+        height: 100px
+  &-slider
+    overflow: hidden
+    position: relative
+    // .swiper-slide
+    //   opacity: 0 !important
+    // .swiper-slide-active
+    //   opacity: 1 !important
+  &-item
+    position: relative
+    &__img
+      width: 565px
+      height: 490px
+      position: relative
+      background: linear-gradient(226.69deg, rgba(0, 0, 0, 0.41) 4.82%, rgba(0, 0, 0, 0) 34.23%)
+      h4
+        width: 185px
+        margin-left: auto
+        font-size: 48px
+        font-weight: 600
+        padding-top: 25px
+        color: #fff
+      img
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        object-fit: cover
+        object-position: center
+    &__text
+      width: 840px
+      position: absolute
+      right: 0
+      top: 130px
+      background: #e0edbe
+      padding: 40px 55px 75px
+      h2
+        font-size: 36px
+        font-weight: 300
+      small
+        display: block
+        margin-top: 15px
+        font-size: 14px
+        color: #67a755
+      p
+        font-size: 14px
+        margin-top: 20px
+        max-width: 610px
+      .btn-wrap
+        position: absolute
+        left: 55px
+        bottom: -28px
+
+  &-control
+    position: absolute
+    bottom: 25px
+    right: 0
+    z-index: 100
+    @include flexbox
+    align-items: center
+    justify-content: flex-end
+    width: 100%
+  &-dots
+    @include flexbox
+    align-items: center
+    margin-left: auto
+    width: initial !important
+    bottom: initial !important
+    left: initial !important
+    .swiper-pagination-bullet
+      background: #d1d1d1
+      opacity: 1
+      width: 13px
+      height: 13px
+      margin: 0
+      margin-left: 17px
+      &:first-child
+        margin-left: 0
+    .swiper-pagination-bullet-active
+      background: $color-pink
+  &-next
+    margin-left: 50px
+    width: 78px
+    height: 7px
+    background: url(../img/svg/any-kitchen__arrow.svg) no-repeat
+    cursor: pointer
+
+  &-page
+    padding-bottom: 80px
+    &__img
+      width: 100%
+      height: 400px
+      object-fit: cover
+      object-position: center
+  &-list
+    .action-link
+      margin: 0 10px 20px
+      width: calc(100% / 4 - 20px)
+  &-link
+    height: 310px
+    display: block
+    position: relative
+    overflow: hidden
+    width: 100%
+    color: #fff
+    img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+      transition: .3s
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: 2
+      background: linear-gradient(163.26deg, rgba(0, 0, 0, 0.49) 11.86%, rgba(0, 0, 0, 0) 67.07%)
+    &__text
+      position: relative
+      z-index: 3
+      padding: 15px 20px
+      display: block
+      h3
+        font-size: 24px
+        font-weight: 600
+        color: #f5a731
+      h4
+        margin-top: 7px
+        font-weight: 600
+      h5
+        font-size: 14px
+        font-weight: 300
+        margin-top: 15px
+      .btn-wrap
+        margin-top: 15px
+    &:hover img
+      transform: scale(1.1,1.1)
+  &-text
+    margin: 50px 0
+    font-size: 14px
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+    h3
+      font-weight: 600
+      font-size: 16px
+    p
+      margin-top: 15px
+      &:first-child
+        margin-top: 0

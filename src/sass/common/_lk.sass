@@ -1,0 +1,185 @@
+.lk
+  &-top
+    margin-bottom: 40px
+    .container
+      @include flexbox
+      align-items: center
+    &__user
+      @include flexbox
+      align-items: center
+      img
+        width: 100px
+        height: 100px
+        border-radius: 100%
+        object-fit: cover
+        object-position: center
+        margin-right: 20px
+      p
+        font-size: 24px
+        font-weight: 300
+    &__nav
+      @include flexbox
+      align-items: center
+      margin-left: auto
+      li
+        margin-right: 50px
+        &:last-child
+          margin-right: 0
+        a
+          @include flexbox
+          align-items: center
+          color: #788e39
+          img
+            margin-right: 20px
+          b
+            font-weight: 600
+
+  &-list
+    padding-bottom: 80px
+    h2
+      margin-top: 80px
+      text-transform: uppercase
+      color: #828282
+      font-weight: 600
+      &:first-child
+        margin-top: 0
+        color: #e07496
+
+
+  &-order
+    background: #fff
+    border-radius: 15px
+    box-shadow: 0px 0px 146px rgba(0, 0, 0, 0.1)
+    margin-top: 30px
+    padding: 50px 60px
+    cursor: pointer
+    &__top
+      @include flexbox
+      align-items: center
+      justify-content: space-between
+      b
+        font-weight: 600
+    &__date
+      padding: 10px 25px
+      background: #efefef
+      border-radius: 25px
+      font-size: 14px
+      font-weight: 300
+      color: #828282
+      margin-top: 30px
+      display: inline-block
+      b
+        font-weight: 300
+        color: $color-black
+    &__return
+      height: 36px
+      background: #788e39
+      width: 220px
+      border-radius: 58px
+      display: block
+      margin-left: auto
+      text-align: center
+      line-height: 36px
+      font-weight: 600
+      color: #fff
+      margin-top: -36px
+      transition: .3s
+    &.open
+      cursor: default
+      .lk-order__return
+        margin-top: 0
+        height: 58px
+        line-height: 58px
+        width: 180px
+        background: #df7495
+    &__content
+      display: none
+      padding: 30px 0
+    &__table
+      margin-top: 50px
+      &:first-child
+        margin-top: 0
+      &-top, &-row
+        @include flexbox
+        align-items: flex-start
+      &-top
+        color: #d7d7d7
+      &-col
+        width: 15%
+        position: relative
+        &:first-child
+          flex: 1
+          max-width: 380px
+          margin-right: auto
+      &-title
+        margin-top: 35px
+        font-weight: 600
+      &-row
+        margin-top: 25px
+        .lk-order__table-col
+          font-weight: 600
+          &:first-child
+            font-weight: 300
+            font-size: 14px
+            padding-left: 30px
+            &::before
+              content: '1.'
+              position: absolute
+              top: -2px
+              left: 0
+              font-weight: 600
+              font-size: 16px
+      &-total
+        @include flexbox
+        align-items: center
+        margin-top: 25px
+        padding-top: 25px
+        border-top: 1px solid #E1E1E1
+        b
+          font-weight: 600
+          display: block
+          width: 250px
+        h3
+          margin-left: auto
+          font-weight: 300
+          font-size: 24px
+          color: #828282
+          span
+            color: #788e39
+      &-delivery
+        .lk-order__table-col:first-child
+          font-weight: 600
+          font-size: 16px
+          padding: 0
+          &::before
+            display: none
+        .lk-order__table-total
+          h3
+            text-transform: uppercase
+            font-weight: 600
+            span
+              font-size: 48px
+              font-weight: 300
+              text-transform: none
+
+
+  &-setting
+    background: #fff
+    border-radius: 15px
+    box-shadow: 0px 0px 146px rgba(0, 0, 0, 0.1)
+    margin-top: 30px
+    padding: 50px 60px
+    @include flexbox
+    align-items: flex-start
+    &__col
+      max-width: 430px
+      width: 100%
+      margin-right: 60px
+      &:last-child
+        margin-right: 0
+      h3
+        font-size: 24px
+        font-weight: 300
+        margin: 35px 0
+        &:first-child
+          margin-top: 0

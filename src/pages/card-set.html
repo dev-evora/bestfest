@@ -1,0 +1,300 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Страница набора' %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2>Канапе артишок с подкопченой курицей и болгарским перцем</h2>
+  </div>
+</section>
+
+<section class="card">
+  <div class="container">
+    <div class="card-tags">
+      <div class="card-tags__section">
+        <b>Кухня</b>
+        <ul>
+          <li>Авторская</li>
+        </ul>
+      </div>
+      <div class="card-tags__section">
+        <b>Повод</b>
+        <ul>
+          <li>Фуршет</li>
+          <li>Кофебрейк</li>
+        </ul>
+      </div>
+      <div class="card-tags__section">
+        <b>Питание</b>
+        <ul>
+          <li>Вегетарианское</li>
+          <li>Без лактозы</li>
+          <li>Диетическое</li>
+        </ul>
+      </div>
+      <div class="card-tags__section">
+        <b>Для кого</b>
+        <ul>
+          <li>Женщины</li>
+          <li>Дети</li>
+        </ul>
+      </div>
+      <div class="card-tags__section">
+        <b>Тип готовки</b>
+        <ul>
+          <li>Копчение</li>
+        </ul>
+      </div>
+      <div class="card-tags__section">
+        <b>Упаковка</b>
+        <ul>
+          <li>Общая</li>
+        </ul>
+      </div>
+      <div class="card-tags__section">
+        <b>Температура</b>
+        <ul>
+          <li>Холодное</li>
+        </ul>
+      </div>
+      <div class="card-tags__section">
+        <b>Количество персон</b>
+        <ul>
+          <li>10</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-wrap">
+      <div class="card-photo">
+        <div class="card-photo-layout">
+          <div class="card-photo-time">Заказ за 36 часов до мероприятия</div>
+          <div class="card-photo-new">Новинка!</div>
+          <div class="card-photo-energy">На 100г.: 380 г<br> 10 шт.</div>
+        </div>
+        <div class="card-photo-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/content/item.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/content/item.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/content/item.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/content/item.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card-info__main">
+          <div class="card-price">
+            <h3><span class="current-price">1030</span> ₽ / чел.</h3>
+            <h4>1500 ₽ / чел.</h4>
+          </div>
+          <div class="card-person">
+            <b>Количество персон</b>
+            <label>
+              <input type="radio" name="person" value="5" checked />
+              <p>5</p>
+            </label>
+            <label>
+              <input type="radio" name="person" value="10" />
+              <p>10</p>
+            </label>
+            <label>
+              <input type="radio" name="person" value="15" />
+              <p>15</p>
+            </label>
+            <label>
+              <input type="radio" name="person" value="25" />
+              <p>25</p>
+            </label>
+            <label>
+              <input type="radio" name="person" value="30" />
+              <p>30</p>
+            </label>
+            <label>
+              <input type="radio" name="person" value="40" />
+              <p>40</p>
+            </label>
+            <label>
+              <input type="radio" name="person" value="50" />
+              <p>50</p>
+            </label>
+            <label>
+              <input type="radio" name="person" value="100" />
+              <p>100</p>
+            </label>
+            <h3><span class="total-price">1030</span> ₽ / чел.</h3>
+          </div>
+        </div>
+        <div class="card-info__btn">
+          <a href="#" class="item-buy">В корзину</a>
+          <a href="#" class="card-edit">Изменить состав</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="card-content">
+  <div class="container">
+    <div class="card-main">
+      <div class="card-text">
+        <h3>Описание</h3>
+        <p>Подкопченое куриное филе, ломтик болгарского перца и нежная сердцевинка артишока на гренке из свежего пшеничного хлеба.</p>
+      </div>
+
+      <div class="card-menu-title">
+        <h3>Состав меню на одну персону:</h3>
+        <p>350 мл. / чел.</p>
+        <p>1060 г. / чел.</p>
+      </div>
+
+      <div class="card-menu-section">
+        <h3>Закуски</h3>
+        {% include 'common/card-item.html' %}
+        {% include 'common/card-item.html' %}
+        {% include 'common/card-item.html' %}
+      </div>
+
+      <div class="card-menu-section">
+        <h3>Супы</h3>
+        {% include 'common/card-item.html' %}
+      </div>
+
+      <div class="card-menu-section">
+        <h3>Горячие блюда</h3>
+        {% include 'common/card-item.html' %}
+        {% include 'common/card-item.html' %}
+        {% include 'common/card-item.html' %}
+      </div>
+
+      <div class="card-menu-section">
+        <h3>Напитки</h3>
+        <div class="card-item">
+          <img src="img/content/item.jpg" alt="">
+          <div class="card-item__content">
+            <h4>Сок гранатовый</h4>
+            <p>На 100г.: Б23 Ж15 У34</p>
+          </div>
+          <div class="card-item__col">
+            <p>Выход</p>
+            <b><span class="ml">200</span> мл</b>
+          </div>
+          <div class="card-item__col">
+            <p>Количество<br> в порции</p>
+            <b>10 шт.</b>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-menu-total">
+        <p>Общий выход:</p>
+        <b class="total-kg"><span></span> кг</b>
+        <b class="total-ml"><span></span> мл</b>
+      </div>
+
+    </div>
+    <div class="card-second">
+      <b>В набор включены услуги:</b>
+      <div class="card-second__content">
+
+        <div class="card-service">
+          <img src="img/svg/card-service-1.svg" alt="">
+          <h3>Посуда</h3>
+          <ul>
+            <li>
+              <p>Тарелка закусочная</p>
+              <span>40 шт.</span>
+            </li>
+            <li>
+              <p>Тарелка столовая</p>
+              <span>40 шт.</span>
+            </li>
+            <li>
+              <p>Вилка столовая</p>
+              <span>40 шт.</span>
+            </li>
+            <li>
+              <p>Нож столовый </p>
+              <span>40 шт.</span>
+            </li>
+            <li>
+              <p>Бокал для шампанского</p>
+              <span>40 шт.</span>
+            </li>
+          </ul>
+          <a href="#" class="card-service__link"><p>Заказать дополнительную смену</p></a>
+        </div>
+
+        <div class="card-service">
+          <img src="img/svg/card-service-2.svg" alt="">
+          <h3>Аренда оборудования</h3>
+          <ul>
+            <li>
+              <p>Термопот</p>
+              <span>1 шт.</span>
+            </li>
+            <li>
+              <p>Барбекюшница</p>
+              <span>1 шт.</span>
+            </li>
+          </ul>
+          <a href="#" class="card-service__link"><p>Заказать дополнительное оборудование</p></a>
+        </div>
+
+        <div class="card-service">
+          <img src="img/svg/card-service-3.svg" alt="">
+          <h3>Аренда мебели</h3>
+          <ul>
+            <li>
+              <p>Стол на 10 персон</p>
+              <span>4 шт.</span>
+            </li>
+          </ul>
+          <a href="#" class="card-service__link"><p>Заказать дополнительную мебель</p></a>
+        </div>
+
+        <div class="card-service">
+          <img src="img/svg/card-service-4.svg" alt="">
+          <h3>Аренда текстиля</h3>
+          <ul>
+            <li>
+              <p>Скатерть для стола на 10 персон праздничная</p>
+              <span>4 шт.</span>
+            </li>
+          </ul>
+          <a href="#" class="card-service__link"><p>Заказать дополнительный текстиль</p></a>
+        </div>
+
+        <div class="card-service">
+          <img src="img/svg/card-service-5.svg" alt="">
+          <h3>Персонал</h3>
+          <ul>
+            <li>
+              <p>Официант</p>
+              <span>4 шт.</span>
+            </li>
+          </ul>
+          <a href="#" class="card-service__link"><p>Заказать дополнительный персонал</p></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="card-rec">
+  <div class="container">
+    <h2>Похожие наборы в этом разделе:</h2>
+    <div class="row">
+      {% include 'common/item-set.html' %}
+      {% include 'common/item-set.html' %}
+      {% include 'common/item-set.html' %}
+      {% include 'common/item-set.html' %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}ca

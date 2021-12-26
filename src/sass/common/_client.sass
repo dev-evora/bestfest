@@ -1,0 +1,36 @@
+.client
+  padding-top: 50px
+  padding-bottom: 115px
+  h2
+    font-size: 72px
+    font-weight: 700
+    line-height: 1
+    max-width: 675px
+    span
+      color: $color-green
+  &-slider
+    // background: #000
+    overflow: hidden
+    position: relative
+    margin-top: 80px
+    // mask: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%)
+    .swiper-slide
+      @include flexbox
+      align-items: center
+      justify-content: center
+      height: 80px
+      img
+        max-height: 80px
+  &-arrow
+    position: absolute
+    top: 0
+    bottom: 0
+    width: 220px
+    z-index: 10
+    cursor: pointer
+    background: url(../img/svg/client-arrow.svg) no-repeat center left, linear-gradient(90deg, #FFFFFF 15.34%, rgba(255, 255, 255, 0) 98.48%)
+    &__prev
+      left: 0
+    &__next
+      right: 0
+      transform: rotate(180deg)

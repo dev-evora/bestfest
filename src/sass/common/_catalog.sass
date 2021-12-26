@@ -1,0 +1,193 @@
+.catalog
+  padding-bottom: 80px
+  &-row
+    @include flexbox
+    align-items: flex-start
+  &-sidebar
+    width: 270px
+    &__reset
+      margin-bottom: 20px
+      font-size: 14px
+      color: #828282
+      text-decoration: underline
+      text-align: center
+      cursor: pointer
+    &__item
+      border-radius: 50px
+      background: #788e39
+      padding: 0 30px
+      color: #fff
+      margin-bottom: 20px
+      transition: .2s
+      &.open
+        background: #a5b96e
+        .catalog-sidebar__title-toggle::before
+          filter: none
+          transform: rotate(0deg)
+    &__title
+      font-weight: 600
+      padding: 15px 0
+      &-toggle
+        cursor: pointer
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          top: 0
+          right: 0
+          bottom: 0
+          margin: auto 0
+          width: 8px
+          height: 7px
+          background: url(../img/svg/catalog-sidebar-arrow.svg) no-repeat
+          filter: brightness(0) invert(1)
+          transform: rotate(90deg)
+          transition: .2s
+    &__content
+      display: none
+      padding-bottom: 30px
+      label
+        display: block
+        margin-bottom: 20px
+        cursor: pointer
+        &:last-child
+          margin-bottom: 0
+        input
+          @include visually-hidden
+          &:checked + p::before
+            background: #e07496
+        p
+          font-size: 14px
+          position: relative
+          padding-left: 20px
+          &::before
+            content: ''
+            position: absolute
+            top: 2px
+            left: 0
+            width: 12px
+            height: 12px
+            background: #788e39
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+  &-main
+    width: calc(100% - 270px - 55px)
+    margin-left: auto
+    .item
+      width: calc(100% / 3 - 20px)
+      margin-left: 10px
+      margin-right: 10px
+  &-action
+    margin-top: 35px
+    overflow: hidden
+    position: relative
+    &__arrow
+      position: absolute
+      top: 0
+      bottom: 0
+      width: 100px
+      background:  url(../img/svg/catalog-action-arrow.svg) no-repeat center right, linear-gradient(-90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
+      cursor: pointer
+      z-index: 10
+      &-prev
+        left: 0
+        transform: rotate(180deg)
+      &-next
+        right: 0
+      &.swiper-button-disabled
+        display: none
+  &-seo
+    margin-top: 35px
+    color: #4f4f4f
+    font-size: 14px
+    font-weight: 300
+
+  &-tags
+    @include flexbox
+    align-items: flex-start
+    margin-right: -20px
+    li
+      cursor: pointer
+      display: block
+      padding: 7px 20px 9px
+      border: 1px solid #E07496
+      color: #e07496
+      border-radius: 20px
+      font-size: 14px
+      margin-right: 20px
+      margin-bottom: 20px
+      transition: .2s
+      &:hover, &.active
+        color: #fff
+        background: #e07496
+      // &.disabled
+      //   border: 1px solid #E07496 !important
+      //   color: #e07496 !important
+      //   background: #fff !important
+  &-top
+    @include flexbox
+    align-items: center
+    justify-content: space-between
+    &__label
+      @include flexbox
+      align-items: center
+      margin-top: 10px
+      p
+        font-size: 14px
+        color: #828282
+        padding-right: 10px
+      select
+        border: 0
+        border-radius: 0
+        background: transparent 
+        color: #828282
+        text-decoration: underline
+        font-weight: 600
+        cursor: pointer
+        appearance: none
+  &-load
+    margin-top: 50px
+    justify-content: center
+
+  &-banner
+    &__constructor
+      padding: 20px 70px
+      margin-bottom: 25px
+      padding-left: 100px
+      background: #F98EB0
+      border-top: 4px solid #DF7495
+      border-bottom: 4px solid #DF7495
+      border-radius: 70px
+      color: #DD678C
+      @include flexbox
+      align-items: center
+      h2
+        flex: 1
+        font-size: 24px
+        font-weight: 700
+      img
+        margin-right: 50px
+        width: 90px
+    &__menu
+      padding: 35px 70px
+      background: #b7cc7e
+      border-top: 4px solid #A5B96E
+      border-bottom: 4px solid #A5B96E
+      border-radius: 70px
+      color: #788e39
+      @include flexbox
+      align-items: center
+      justify-content: space-between
+      width: 100%
+      margin: 35px 10px 0
+      h2
+        max-width: 400px
+        font-size: 24px
+        font-weight: 700
+      a
+        @include flexbox
+        align-items: center
+      img
+        margin-right: 20px
+      b
+        font-weight: 600
+        border-bottom: 1px solid #788e39

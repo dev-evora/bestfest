@@ -1,0 +1,139 @@
+.header
+  padding: 20px 0
+  .row
+    align-items: center
+  &-logo
+    @include flexbox
+    justify-content: center
+  &-burger
+    @include flexbox
+    align-items: center
+    p
+      cursor: pointer
+  &-btn
+    @include flexbox
+    align-items: center
+    justify-content: center
+    a
+      padding: 5px 15px
+      font-size: 14px
+      @include flexbox
+      align-items: center
+      transition: .2s
+      img
+        margin-right: 10px
+        transition: .1s
+      &:hover
+        color: #fff
+        img
+          filter: brightness(0) invert(1)
+    &__green a
+      color: $color-green
+      border: 1px solid $color-green
+      &:hover
+        background: $color-green
+    &__brown a
+      color: $color-brown
+      border: 1px solid $color-brown
+      &:hover
+        background: $color-brown
+  &-contact
+    @include flexbox
+    align-items: flex-start
+    justify-content: flex-end
+    &__phone
+      font-size: 20px
+      font-weight: 300
+      margin-top: 10px
+    &__menu
+      @include flexbox
+      align-items: center
+      li
+        margin-right: 25px
+        &:last-child
+          margin-right: 0
+
+.burger
+  cursor: pointer
+  -webkit-tap-highlight-color: transparent
+  transition: transform 400ms
+  user-select: none
+  margin-left: -16px
+  .top
+    stroke-dasharray: 40 139
+  .bottom
+    stroke-dasharray: 40 180
+  &.active
+    transform: rotate(45deg)
+    .top
+      stroke-dashoffset: -98px
+    .bottom
+      stroke-dashoffset: -138px
+  path
+    fill: none
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms
+    stroke: #000
+    stroke-width: 5.5
+    stroke-linecap: round
+
+%icon-header-link
+  display: block
+  position: relative
+  height: 16px
+  width: 16px
+  &:before, &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    width: 16px
+    height: 16px
+    margin: 0 auto
+    background-repeat: no-repeat
+    background-image: url(../img/svg/header-link.svg)
+    transition: .2s
+  &:before
+    opacity: 1
+  &:after
+    opacity: 0
+
+.icon-search
+  @extend %icon-header-link
+  &:before
+    background-position: 0 0
+  &:after
+    background-position: 0 -16px
+
+.icon-fav
+  @extend %icon-header-link
+  width: 17px
+  &:before
+    width: 17px
+    background-position: -16px 0
+  &:after
+    width: 17px
+    background-position: -16px -16px
+
+.icon-lk
+  @extend %icon-header-link
+  &:before
+    background-position: -33px 0
+  &:after
+    background-position: -33px -16px
+
+.icon-cart
+  @extend %icon-header-link
+  width: 18px
+  &:before
+    width: 18px
+    background-position: -49px 0
+  &:after
+    width: 18px
+    background-position: -49px -16px
+
+.header-contact__menu .icon:hover
+  &:before
+    opacity: 0
+  &:after
+    opacity: 1

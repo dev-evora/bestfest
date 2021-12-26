@@ -1,0 +1,113 @@
+.about
+  padding-bottom: 80px
+  &-bg
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #F0F1F5
+    z-index: -1
+  &-text
+    max-width: 630px
+    line-height: 1.8
+    font-weight: 300
+    position: relative
+    p
+      margin-top: 30px
+      &:first-child
+        margin-top: 0
+    img
+      position: absolute
+      z-index: -1
+      top: -170px
+      left: 100%
+      margin-left: 40px
+  &-list
+    @include flexbox
+    align-items: stretch
+    max-width: 810px
+    width: 100%
+    margin: 15px -15px 0
+    counter-reset: list
+    li
+      width: calc(100% / 3 - 30px)
+      margin: 30px 15px 0
+      @include flexbox
+      align-items: center
+      padding: 60px 20px 30px
+      border: 2px solid #788E39
+      font-size: 14px
+      position: relative
+      overflow: hidden
+      &::before
+        content: ''
+        position: absolute
+        top: -65px
+        left: -25px
+        width: 115px
+        height: 115px
+        border-radius: 100%
+        background: #788E39
+      &::after
+        counter-increment: list
+        content: counter(list)
+        position: absolute
+        top: 0
+        left: 25px
+        color: #fff
+        font-size: 36px
+        font-weight: 600
+
+  &-food
+    @include flexbox
+    align-items: flex-start
+    &__left
+      width: 760px
+      h2
+        text-transform: uppercase
+        font-weight: 700
+        color: $color-pink
+        font-size: 64px
+      img
+        margin-top: 30px
+    &__right
+      width: calc(100% - 760px)
+      padding-left: 50px
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 1px
+        height: 530px
+        background: #000
+    &__title
+      text-transform: uppercase
+      font-weight: 700
+      font-size: 36px
+    &__text
+      line-height: 1.9
+      // font-size: 14px
+      p
+        margin-top: 20px
+    &__top
+      margin-bottom: 40px
+      text-transform: uppercase
+      font-size: 24px
+      font-weight: 600
+      width: 100%
+  
+  &-complex
+    padding: 120px 0 70px
+    @include flexbox
+    align-items: flex-start
+    position: relative
+    &__left
+      width: calc(100% - 530px - 65px)
+      margin-right: auto
+    &__img
+      position: absolute
+      top: -220px
+      right: 0

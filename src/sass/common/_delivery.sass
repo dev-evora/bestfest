@@ -1,0 +1,75 @@
+.delivery
+  &-article
+    &__item
+      @include flexbox
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 80px
+      &:nth-child(2n)
+        .delivery-article__img
+          order: -1
+    &__img
+      width: 500px
+      height: 330px
+      object-fit: cover
+      object-position: center
+    &__text
+      width: calc(100% - 500px - 85px)
+      h2
+        text-transform: uppercase
+        font-size: 36px
+        font-weight: 600
+        // margin-bottom: 30px
+      p
+        font-size: 14px
+        line-height: 1.8
+        margin-top: 15px
+  &-time
+    margin-bottom: 30px
+    &__row
+      @include flexbox
+      align-items: center
+    &__item
+      padding: 15px 35px 20px
+      color: #fff
+      background: $color-green
+      border-radius: 50px
+      margin-right: 40px
+      h2
+        font-weight: 300
+        font-size: 24px
+      p
+        font-weight: 600
+        margin-top: 5px
+    &__warning
+      max-width: 280px
+      font-weight: 600
+      color: #f42222
+
+  &-price
+    padding-bottom: 80px
+    h2
+      font-size: 48px
+      font-weight: 300
+    &__row
+      @include flexbox
+      align-items: stretch
+      margin: 0 -25px
+    &__item
+      width: calc(100% / 3 - 50px)
+      margin: 50px 25px 0
+      border-radius: 25px
+      padding: 25px 30px
+      color: #fff
+      h3
+        text-transform: uppercase
+        font-size: 24px
+        font-weight: 600
+      p
+        font-weight: 600
+        margin-top: 10px
+    &__text
+      padding: 10px 0 20px
+    &__bonus
+      padding-top: 10px
+      border-top: 1px solid rgba(0,0,0, .2)

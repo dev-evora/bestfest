@@ -1,0 +1,44 @@
+.services
+  &-home
+    padding-bottom: 100px
+  &-menu
+    padding-top: 70px
+  &-block
+    @include flexbox
+    align-items: flex-start
+  &-title
+    font-size: 96px
+    line-height: 1.2
+    font-weight: 700
+    max-width: 600px
+    border-bottom: 2px solid #E0EDBE
+    padding-bottom: 47px
+    span
+      color: $color-pink
+  &-list
+    width: calc(100% - 660px)
+    @include flexbox
+    justify-content: space-around
+    padding-right: 40px
+    margin-left: auto
+    li
+      margin-top: 50px
+      width: 134px
+      a
+        padding: 25px 0
+        border: 1px solid #67A755
+        color: #67a755
+        display: block
+        text-align: center
+        font-weight: 600
+        transition: .2s
+        img
+          margin: 0 auto 20px
+          transition: .1s
+        &:hover
+          border: 1px solid $color-pink
+          background: $color-pink
+          color: #fff
+          box-shadow: 0 0 0 10px rgba(224, 116, 150, 0.43)
+          img
+            filter: brightness(0) invert(1)

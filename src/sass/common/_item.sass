@@ -1,0 +1,191 @@
+.item
+  margin-top: 35px
+  position: relative
+  &-top
+    @include flexbox
+    align-items: center
+    justify-content: space-between
+    position: absolute
+    left: 0
+    right: 0
+    top: 20px
+    z-index: 10
+    &::before
+      content: ''
+      position: absolute
+      top: -20px
+      left: 0
+      right: 0
+      height: 180px
+      background: linear-gradient(214.2deg, rgba(0, 0, 0, 0.46) 11.17%, rgba(0, 0, 0, 0) 34.37%)
+    &__new
+      font-weight: 600
+      background: #f5a731
+      padding: 3px 10px 5px
+    &__time
+      margin-right: 10px
+      font-size: 12px
+      position: relative
+      color: #fff
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        width: 12px
+        height: 12px
+        background: url(../img/svg/time.svg) no-repeat
+        left: -20px
+        margin: auto 0
+  &-pic
+    width: 100%
+    height: 290px
+    object-fit: cover
+    object-position: center
+  &-info
+    @include flexbox
+    align-items: center
+    justify-content: space-between
+    font-size: 14px
+    color: #bdbdbd
+    margin: 15px 0
+    p
+      width: calc((100% - 16px) / 2)
+      &:last-child
+        text-align: right
+  &-like
+    width: 16px
+    height: 16px
+    background: url(../img/svg/like.svg) no-repeat center
+    cursor: pointer
+    &.active
+      background: url(../img/svg/like-active.svg) no-repeat center
+  &-title
+    display: block
+    font-weight: 600
+    margin-bottom: 10px
+  &-energy
+    font-size: 14px
+    color: #bdbdbd
+    margin-bottom: 10px
+  &-price
+    @include flexbox
+    align-items: center
+    margin-bottom: 15px
+    b
+      font-weight: 600
+      color: #67a755
+    p
+      font-size: 14px
+      color: #828282
+      text-decoration: line-through
+    b, p
+      flex: 1
+  &-bottom
+    @include flexbox
+    align-items: center
+    justify-content: space-between
+  &-buy
+    padding: 4px 8px
+    background: #788e39
+    color: #fff
+    font-size: 13px
+    font-weight: 600
+    border-radius: 15px
+    @include flexbox
+    align-items: center
+    cursor: pointer
+    &::before
+      content: ''
+      display: block
+      width: 18px
+      height: 18px
+      background: url(../img/svg/buy.svg) no-repeat center
+      margin-right: 5px
+  &-constructor
+    width: 26px
+    height: 22px
+    background: url(../img/svg/constructor.svg) no-repeat center
+    cursor: pointer
+    &.active
+      background: url(../img/svg/constructor-active.svg) no-repeat center
+
+  &-count
+    @include flexbox
+    align-items: center
+    height: 30px
+    border: 1px solid #EFEFEF
+    background: #fff
+    border-radius: 30px
+    overflow: hidden
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1)
+    &__number
+      height: 13px
+      width: 37px
+      border: 0
+      border-left: 1px solid #DBDBDB
+      border-right: 1px solid #DBDBDB
+      border-radius: 0
+      -moz-appearance: textfield
+      text-align: center
+      font-weight: 600
+      font-size: 14px
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+    &__minus, &__plus
+      width: 25px
+      height: 100%
+      // background: #eee
+      text-align: center
+      cursor: pointer
+      font-weight: 600
+      line-height: 25px
+      display: block
+
+  &-slider
+    overflow: hidden
+    img
+      height: 220px
+      width: 100%
+      object-fit: cover
+      object-position: center
+  &-thumbs
+    overflow: hidden
+    margin-top: 10px
+    img
+      height: 50px
+      width: 100%
+      object-fit: cover
+      object-position: center
+      opacity: 0.5
+      transition: .2s
+      position: relative
+      z-index: -1
+    .swiper-slide
+      position: relative
+      cursor: pointer
+      box-shadow: inset 0 0 0 2px transparent
+      transition: .2s
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: #000
+        z-index: -2
+      &-thumb-active
+        box-shadow: inset 0 0 0 2px #E07496
+        img
+          opacity: 1
+
+  &-service
+    @include flexbox
+    align-items: center
+    margin-bottom: 10px
+    img
+      margin-right: 15px
+      margin-bottom: 10px

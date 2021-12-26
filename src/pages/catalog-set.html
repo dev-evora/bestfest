@@ -1,0 +1,97 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Раздел наборов' %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2>Наборы для фуршетов</h2>
+    <h3>Маленькая закуска с большой душой</h3>
+  </div>
+</section>
+
+<section class="catalog">
+  <div class="container">
+    <div class="catalog-row">
+
+      {% include 'common/catalog-sidebar.html' %}
+
+      <div class="catalog-main">
+
+        <div class="catalog-banner__constructor">
+          <img src="img/svg/catalog-banner-constructor.svg" alt="">
+          <h2>Вы можете скорректировать меню любого набора при помощи конструктора</h2>
+        </div>
+
+        <div class="catalog-top">
+
+          <label class="catalog-top__label">
+            <p>Показывать по:</p>
+            <select name="">
+              <option value="12" selected>12</option>
+              <option value="24">24</option>
+              <option value="36">36</option>
+            </select>
+          </label>
+
+          <label class="catalog-top__label">
+            <p>Сортировать по:</p>
+            <select name="">
+              <option value="Цене - сначала недорогие" selected>Цене - сначала недорогие</option>
+              <option value="Цене - сначала дорогие">Цене - сначала дорогие</option>
+            </select>
+          </label>
+
+        </div>
+        
+        <div class="row">
+          {% include 'common/item-set.html' %}
+          {% include 'common/item-set.html' %}
+          {% include 'common/item-set.html' %}
+        
+          <div class="catalog-banner__menu">
+            <h2>Вы можете подобрать отдельные блюда в основном меню</h2>
+            <a href="#"><img src="img/svg/catalog-banner-menu.svg"><b>Смотреть меню</b></a>
+          </div>
+
+          {% include 'common/item-set.html' %}
+          {% include 'common/item-set.html' %}
+          {% include 'common/item-set.html' %}
+        </div>
+
+        <div class="catalog-action">
+          <div class="catalog-action__arrow catalog-action__arrow-prev"></div>
+          <div class="catalog-action__arrow catalog-action__arrow-next"></div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">{% include 'common/action-link.html' %}</div>
+            <div class="swiper-slide">{% include 'common/action-link.html' %}</div>
+            <div class="swiper-slide">{% include 'common/action-link.html' %}</div>
+            <div class="swiper-slide">{% include 'common/action-link.html' %}</div>
+            <div class="swiper-slide">{% include 'common/action-link.html' %}</div>
+          </div>
+        </div>
+
+        <div class="catalog-seo">Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам... Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам...Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам...Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам...</div>
+
+        <div class="row">
+          {% include 'common/item-set.html' %}
+          {% include 'common/item-set.html' %}
+          {% include 'common/item-set.html' %}
+          {% include 'common/item-set.html' %}
+          {% include 'common/item-set.html' %}
+          {% include 'common/item-set.html' %}
+        </div>
+
+        <div class="btn-wrap catalog-load"><a href="#" class="btn btn-pink">Загрузить еще (56)</a></div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

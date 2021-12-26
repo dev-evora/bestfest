@@ -1,0 +1,47 @@
+.make-order
+  padding-top: 120px
+  padding-bottom: 105px
+  h2
+    font-size: 92px
+    font-weight: 700
+    line-height: 1
+    max-width: 900px
+  &__list
+    margin-top: 10px
+    @include flexbox
+    align-items: center
+    justify-content: space-between
+    li
+      margin-top: 50px
+      width: 230px
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        height: 12px
+        top: 54px
+        right: -118px
+        width: 118px
+        background: url(../img/svg/make-arrow.svg) no-repeat
+      span
+        @include flexbox
+        align-items: center
+        justify-content: center
+        height: 120px
+        img
+          max-height: 100%
+      p
+        margin-top: 30px
+        font-size: 14px
+        text-align: center
+      &:last-child::before
+        display: none
+  &__or
+    @include flexbox
+    align-items: center
+    margin-top: 80px
+    h3
+      margin-right: 80px
+      font-size: 55px
+      font-weight: 700
+      color: $color-dark-green

@@ -1,0 +1,145 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Главная' %}
+
+{% block content %}
+
+<section class="builder-take">
+  <div class="container">
+    <img src="img/builder-take.png" alt="" class="builder-take__img">
+    <div class="builder-take__text">
+      <h2>Воспользуйтесь нашим конструктором меню!</h2>
+      <div class="btn-wrap"><a href="#" class="btn btn-pink">Собрать свой заказ</a></div>
+    </div>
+  </div>
+</section>
+
+{% include 'common/action.html' %}
+
+<section class="catering-format">
+  <div class="container">
+    <h2>Кейтеринг для любого формата <span>мероприятий:</span></h2>
+    <div class="catering-format__slider">
+      <div class="catering-format__wrap">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">{% include 'common/catering-format__item.html' %}</div>
+          <div class="swiper-slide">{% include 'common/catering-format__item.html' %}</div>
+          <div class="swiper-slide">{% include 'common/catering-format__item.html' %}</div>
+          <div class="swiper-slide">{% include 'common/catering-format__item.html' %}</div>
+          <div class="swiper-slide">{% include 'common/catering-format__item.html' %}</div>
+          <div class="swiper-slide">{% include 'common/catering-format__item.html' %}</div>
+          <div class="swiper-slide">{% include 'common/catering-format__item.html' %}</div>
+        </div>
+      </div>
+    </div>
+    <div class="catering-format__control">
+      <div class="catering-format__arrow catering-format__arrow-prev"></div>
+      <div class="catering-format__count"><b class="this">1</b><b class="all"></b></div>
+      <div class="catering-format__arrow catering-format__arrow-next"></div>
+    </div>
+    <div class="btn-wrap"><a href="#" class="btn btn-pink">Смотреть все наборы</a></div>
+  </div>
+</section>
+
+<section class="any-kitchen">
+  <div class="container">
+    <div class="any-kitchen__slider">
+      <div class="any-kitchen__control">
+        <div class="any-kitchen__dots"></div>
+        <div class="any-kitchen__next"></div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">{% include 'common/any-kitchen__item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/any-kitchen__item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/any-kitchen__item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/any-kitchen__item.html' %}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services services-home">
+  <div class="container">
+    {% include 'common/services.html' %}
+  </div>
+</section>
+
+<section class="partner partner-home">
+  <div class="container">
+    {% include 'common/partner.html' %}
+  </div>
+</section>
+
+<section class="reason-event">
+  <div class="container">
+    {% include 'common/reason-event.html' %}
+  </div>
+</section>
+
+<section class="client">
+  <div class="container">
+    <h2><span>Наши</span> довольные клиенты:</h2>
+    <div class="client-slider">
+      <div class="client-arrow client-arrow__prev"></div>
+      <div class="client-arrow client-arrow__next"></div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/content/client.png" alt=""></div>
+        <div class="swiper-slide"><img src="img/content/client.png" alt=""></div>
+        <div class="swiper-slide"><img src="img/content/client.png" alt=""></div>
+        <div class="swiper-slide"><img src="img/content/client.png" alt=""></div>
+        <div class="swiper-slide"><img src="img/content/client.png" alt=""></div>
+        <div class="swiper-slide"><img src="img/content/client.png" alt=""></div>
+        <div class="swiper-slide"><img src="img/content/client.png" alt=""></div>
+        <div class="swiper-slide"><img src="img/content/client.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="best">
+  <div class="container">
+    <ul class="best-list">
+      <li>
+        <img src="img/content/best-1.jpg" alt="">
+        <p><b>Отлаженная логистика:</b> мы всегда приезжаем вовремя</p>
+      </li>
+      <li>
+        <img src="img/content/best-2.jpg" alt="">
+        <p>Специальное оборудование увеличивает срок хранения блюд</p>
+      </li>
+      <li>
+        <img src="img/content/best-3.jpg" alt="">
+        <p>Специальный транспорт с холодильниками</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="make-order">
+  <div class="container">
+    <h2 class="title">Как сделать заказ на сайте?</h2>
+    <ul class="make-order__list">
+      <li>
+        <span><img src="img/svg/make-order-1.svg" alt=""></span>
+        <p>Выберите интересующие вас позиции в меню или воспользуйтесь конструктором</p>
+      </li>
+      <li>
+        <span><img src="img/svg/make-order-2.svg" alt=""></span>
+        <p>В конструкторе или корзине вы можете выбрать дополнительные услуги</p>
+      </li>
+      <li>
+        <span><img src="img/svg/make-order-3.svg" alt=""></span>
+        <p>Оплатите заказ, наш менеджер связется с вами в течение часа для подтверждения заказа</p>
+      </li>
+      <li>
+        <span><img src="img/svg/make-order-4.svg" alt=""></span>
+        <p>В день мероприятия расслабьтесь и развлекайтсемь - мы все сделаем сами.</p>
+      </li>
+    </ul>
+    <div class="make-order__or">
+      <h3>... или вы можете просто</h3>
+      <a href="#" class="btn btn-pink">Подать заявку</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

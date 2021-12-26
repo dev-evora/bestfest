@@ -1,0 +1,40 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Личный кабинет' %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2>Личный кабинет</h2>
+  </div>
+</section>
+
+<section class="lk-top">
+  <div class="container">
+    <div class="lk-top__user">
+      <img src="img/content/user.jpg" alt="">
+      <p>Василий Иванов</p>
+    </div>
+    <ul class="lk-top__nav">
+      <li><a href="#"><img src="img/svg/lk-setting.svg" alt=""><b>Настройки аккаунта</b></a></li>
+      <li><a href="#"><img src="img/svg/lk-exit.svg" alt=""><b>Выйти</b></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="lk-list">
+  <div class="container">
+    <h2>Активные заказы:</h2>
+    {% include 'common/lk-order.html' %}
+
+    <h2>Завершенные заказы:</h2>
+    {% include 'common/lk-order.html' %}
+    {% include 'common/lk-order.html' %}
+  </div>
+</section>
+
+{% endblock %}

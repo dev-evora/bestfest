@@ -1,0 +1,93 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Общий каталог' %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2>Меню</h2>
+    <h3>Любая еда для ваших мероприятий</h3>
+  </div>
+</section>
+
+<section class="menu">
+  <div class="container">
+    <div class="menu-other">
+      <h3>Вы так же можете пойти другим путем:</h3>
+      <ul class="menu-other__link">
+        <li>
+          <a href="#">
+            <img src="img/svg/menu-other-1.svg" alt="">
+            <p>Использовать<br> конструктор</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/svg/menu-other-2.svg" alt="">
+            <p>Готовые наборы<br> для мероприятий</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/svg/menu-other-3.svg" alt="">
+            <p>Искать<br> по кухне</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/svg/menu-other-4.svg" alt="">
+            <p>Искать по виду<br> мероприятия</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    {# 
+     # в menu-hidden выгружаешь все разделы
+     # menu-list сам разобьёт на секции
+     #}
+    <ul class="menu-hidden">
+      {% include 'common/menu-item.html' %}
+      {% include 'common/menu-item.html' %}
+      {% include 'common/menu-item.html' %}
+      {% include 'common/menu-item.html' %}
+      {% include 'common/menu-item.html' %}
+      {% include 'common/menu-item.html' %}
+      {% include 'common/menu-item.html' %}
+      {% include 'common/menu-item.html' %}
+      {% include 'common/menu-item.html' %}
+      {% include 'common/menu-item.html' %}
+      {% include 'common/menu-item.html' %}
+      {% include 'common/menu-item.html' %}
+      {% include 'common/menu-item.html' %}
+    </ul>
+    <div class="menu-list"></div>
+  </div>
+</section>
+
+{% include 'common/action.html' %}
+
+cta
+
+<section class="services services-menu">
+  <div class="container">
+    {% include 'common/services.html' %}
+  </div>
+</section>
+
+<section class="reason-event reason-event-menu">
+  <div class="container">
+    {% include 'common/reason-event.html' %}
+  </div>
+</section>
+
+<section class="partner partner-home">
+  <div class="container">
+    {% include 'common/partner.html' %}
+  </div>
+</section>
+
+{% endblock %}
