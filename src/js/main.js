@@ -68,6 +68,20 @@ $(function () {
 	})
 
 	$('.lk-order').first().trigger('click')
+
+	$('.order-checkbox-pass input').change(function(){
+		if($(this).is(':checked')){
+			$('.order-label-pass').css('display', 'block')
+			$('.order-label-pass .order-input').prop('required', true)
+		}else{
+			$('.order-label-pass').css('display', 'none')
+			$('.order-label-pass .order-input').prop('required', false)
+		}
+	})
+
+	$('.order-label-date').click(function(){
+		$('> p', this).hide()
+	})
 	
 });
 

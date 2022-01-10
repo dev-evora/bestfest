@@ -1,0 +1,95 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Корзина' %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2>Корзина</h2>
+    <h3>Оформление заказа:</h3>
+  </div>
+</section>
+
+<section class="order">
+  <div class="container">
+    <div class="order-main">
+      <div class="order-section">
+        <h2>Информация о мероприятии</h2>
+        <label class="order-label order-label-date">
+          <input class="order-input order-input-date" type="date" placeholder="Выберите дату мероприятия">
+          <p>Выберите дату мероприятия</p>
+        </label>
+        <label class="order-label">
+          <input class="order-input" type="number" name="person" placeholder="Количество персон*" required />
+        </label>
+      </div>
+      <div class="order-section">
+        <h2>Контактные данные</h2>
+        <a href="#" class="order-link">Уже заказывали у нас?</a>
+        <label class="order-label">
+          <input class="order-input" type="text" name="name" placeholder="Ваше ФИО*" required />
+        </label>
+        <label class="order-label">
+          <input class="order-input masked" type="tel" name="phone" placeholder="Телефон*" required />
+        </label>
+        <label class="order-label">
+          <input class="order-input" type="email" name="email" placeholder="E-mail*" required />
+        </label>
+        <label class="order-checkbox order-checkbox-pass">
+          <input type="checkbox" />
+          <p>Стать постоянным покупателем</p>
+        </label>
+        <label class="order-label order-label-pass">
+          <input class="order-input" type="password" name="pass" placeholder="Пароль" />
+        </label>
+        <label class="order-label order-label-pass">
+          <input class="order-input" type="password" name="repass" placeholder="Повторить пароль" />
+        </label>
+      </div>
+      <div class="order-section">
+        <h2>Доставка</h2>
+        <a href="#" class="order-link">Подробнее о доставке</a>
+        <label class="order-label">
+          <input class="order-input" type="text" name="city" placeholder="Населенный пункт*" required />
+        </label>
+        <label class="order-label">
+          <input class="order-input" type="text" name="street" placeholder="Улица" />
+        </label>
+        <div class="order-label-group">
+          <label class="order-label">
+            <input class="order-input" type="text" name="" placeholder="Дом" />
+          </label>
+          <label class="order-label">
+            <input class="order-input" type="text" name="" placeholder="Корпус" />
+          </label>
+          <label class="order-label">
+            <input class="order-input" type="text" name="" placeholder="Лит." />
+          </label>
+        </div>
+        <div class="order-label-group">
+          <label class="order-label">
+            <input class="order-input" type="text" name="" placeholder="Пом." />
+          </label>
+          <label class="order-label">
+            <input class="order-input" type="text" name="" placeholder="Парадная" />
+          </label>
+          <label class="order-label">
+            <input class="order-input" type="text" name="" placeholder="Этаж" />
+          </label>
+        </div>
+        <textarea class="order-textarea" name="com_address" placeholder="Комментрий к адресу"></textarea>
+      </div>
+      <div class="order-section">
+        <h2>Дополнительно</h2>
+        <textarea class="order-textarea" name="com_order" placeholder="Комментрий к заказу"></textarea>
+      </div>
+    </div>
+    <div class="order-second"></div>
+  </div>
+</section>
+
+{% endblock %}
