@@ -126,7 +126,15 @@
             <button>Применить</button>
           </div>
           <p class="success show">Промокод применен!</p>
-          <p class="error">Промокода не существует!</p>
+          <p class="error">Промокод не найден!</p>
+        </div>
+
+        <div class="order-set">
+          <h3>Ваш заказ:</h3>
+          <h4>Набор: Название набора</h4>
+          {% include 'common/item-order.html' %}
+          {% include 'common/item-order.html' %}
+          {% include 'common/item-order.html' %}
         </div>
 
       </div>
