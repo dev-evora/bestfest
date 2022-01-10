@@ -310,3 +310,41 @@
         font-weight: 600
         color: #4f4f4f
         line-height: 1.7
+
+  &-service
+    margin-top: 40px
+    h3
+      font-size: 24px
+      text-transform: uppercase
+      font-weight: 600
+    &__title
+      height: 54px
+      width: 100%
+      border-radius: 54px
+      @include flexbox
+      align-items: center
+      box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.14)
+      padding-left: 25px
+      padding-right: 12px
+      margin-top: 20px
+      b
+        font-weight: 600
+        margin-left: auto
+        width: calc(100% - 125px - 50px)
+      a
+        height: 30px
+        width: 125px
+        border-radius: 30px
+        border: 1px solid #788E39
+        font-weight: 600
+        @include flexbox
+        align-items: center
+        justify-content: center
+        color: #788e39
+        &::before
+          content: ''
+          width: 24px
+          height: 18px
+          background: url(../img/svg/order-service-btn.svg) no-repeat
+          display: block
+          margin-right: 10px
