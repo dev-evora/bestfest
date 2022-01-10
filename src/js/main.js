@@ -55,13 +55,6 @@ $(function () {
 		$('.catalog-sidebar')[0].reset();
 	});
 
-	$('.card-second__content').overlayScrollbars({
-		className       : "os-theme-round-dark",
-		sizeAutoCapable : true,
-		paddingAbsolute : true,
-		autoHide: true,
-	})
-
 	$('.lk-order').click(function(){
 		$(this).toggleClass('open')
 		$('> .lk-order__content', this).slideToggle()
@@ -82,6 +75,9 @@ $(function () {
 	$('.order-label-date').click(function(){
 		$('> p', this).hide()
 	})
+
+	scroll('.card-second__content')
+	scroll('.order-second-scroll')
 	
 });
 
@@ -204,6 +200,16 @@ const getSum = () => {
 		$('.total-ml span').text(sumMlArr)
 	}
 
+}
+
+const scroll = (el) => {
+	if($(el).length) {
+		$(el).overlayScrollbars({
+			className       : "os-theme-round-dark",
+			sizeAutoCapable : true,
+			paddingAbsolute : true,
+		})
+	}
 }
 
 /*
