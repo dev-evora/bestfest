@@ -88,3 +88,36 @@
     font-size: 48px
     font-weight: 300
     margin-top: 30px
+
+  &-item
+    margin-right: 30px
+    margin-top: 30px
+    width: calc(100% / 3 - 30px)
+    .item-pic
+      height: 190px
+    .item-price
+      margin: 0
+    &-row
+      @include flexbox
+      align-items: flex-start
+      margin-right: -30px
+    &-add
+      position: absolute
+      bottom: 0
+      right: 0
+      width: 24px
+      height: 24px
+      border-radius: 100%
+      background: #e07496
+      z-index: 5
+      cursor: pointer
+      &::before, &::after
+        content: ''
+        width: 2px
+        height: 14px
+        background: #fff
+        position: absolute
+        top: 5px
+        left: 11px
+      &::after
+        transform: rotate(90deg)
