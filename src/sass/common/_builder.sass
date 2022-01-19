@@ -1,4 +1,5 @@
 .builder
+  padding: 50px 0 80px
   &-how
     &__title
       text-transform: uppercase
@@ -35,12 +36,14 @@
   
   &-row
     @include flexbox
-    align-items: flex-start
+    // align-items: flex-start
   &-main
     width: 760px
     background: red
   &-sidebar
     width: 450px
-    background: red
     margin-left: auto
     margin-right: -40px
+    @include flexbox
+    align-items: flex-start
+    flex-direction: column

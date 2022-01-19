@@ -37,7 +37,67 @@
   <div class="container">
     <div class="builder-row">
       <div class="builder-main">1</div>
-      <div class="builder-sidebar">2</div>
+      <div class="builder-sidebar">
+        <div class="order-second-scroll">
+
+          <div class="order-set">
+            <h3>Ваш заказ:</h3>
+            <h4>Набор: Название набора</h4>
+            {% include 'common/item-order.html' %}
+            {% include 'common/item-order.html' %}
+            {% include 'common/item-order.html' %}
+            <div class="order-total">
+              <div class="order-total__out">
+                <p>Общий выход:</p>
+                <b>8,25 кг<br> 8,25 л</b>
+              </div>
+              <div class="order-total__out">
+                <p>На человека:</p>
+                <b>800 г<br> 800 мл</b>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-service">
+            <h3>Дополнительные услуги:</h3>
+
+            <div class="order-service__title">
+              <img src="img/svg/order-service-1.svg" alt="">
+              <b>Посуда</b>
+              <a href="#">Выбрать</a>
+            </div>
+
+            <div class="order-service__title">
+              <img src="img/svg/order-service-2.svg" alt="">
+              <b>Аренда оборудования</b>
+              <a href="#">Выбрать</a>
+            </div>
+
+            <div class="order-service__title">
+              <img src="img/svg/order-service-3.svg" alt="">
+              <b>Аренда мебели</b>
+              <a href="#">Выбрать</a>
+            </div>
+
+            <div class="order-service__title">
+              <img src="img/svg/order-service-4.svg" alt="">
+              <b>Аренда текстиля</b>
+              <a href="#">Выбрать</a>
+            </div>
+
+            <div class="order-service__title">
+              <img src="img/svg/order-service-5.svg" alt="">
+              <b>Персонал</b>
+              <a href="#">Выбрать</a>
+            </div>
+          </div>
+
+          <div class="order-out">ИТОГ<span>120 000 ₽</span></div>
+
+          <div class="btn-wrap"><a href="#" class="btn btn-pink">Оформить заказ</a></div>
+
+        </div>
+      </div>
     </div>
   </div>
 </section>
