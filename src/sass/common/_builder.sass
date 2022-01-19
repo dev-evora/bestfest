@@ -39,7 +39,6 @@
     // align-items: flex-start
   &-main
     width: 760px
-    background: red
   &-sidebar
     width: 450px
     margin-left: auto
@@ -47,3 +46,15 @@
     @include flexbox
     align-items: flex-start
     flex-direction: column
+
+  &-date
+    @include flexbox
+    align-items: flex-start
+    .order-label
+      margin: 0
+      max-width: 290px
+      width: 100%
+    .order-label-date
+      flex: 1
+      max-width: initial
+      margin-right: 40px
