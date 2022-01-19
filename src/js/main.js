@@ -78,6 +78,14 @@ $(function () {
 
 	scroll('.card-second__content')
 	scroll('.order-second-scroll')
+
+	$('.builder-dishes__list li').click(function(){
+		$('.builder-dishes__list li').removeClass('active')
+		$(this).addClass('active')
+		$('.builder-selected-title').text($(this).text())
+	})
+
+	$('.builder-dishes__list li').first().trigger('click')
 	
 });
 
