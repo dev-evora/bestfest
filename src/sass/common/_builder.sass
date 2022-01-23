@@ -144,3 +144,59 @@
         left: 11px
       &::after
         transform: rotate(90deg)
+
+  &-control
+    @include flexbox
+    align-items: center
+    margin-top: 45px
+  &-pagination
+    font-size: 16px
+    font-weight: 600
+    color: #e07496
+    @include flexbox
+    align-items: center
+    margin-left: auto
+    li
+      margin-right: 15px
+      position: relative
+      @include flexbox
+      align-items: center
+      &::before
+        content: ''
+        width: 4px
+        height: 4px
+        border-radius: 4px
+        background: #e07496
+        display: block
+        margin-right: 15px
+      &.active
+        color: #788e39
+    &__arrow
+      &::before
+        display: none !important
+      a
+        display: block
+        width: 11px
+        height: 14px
+        background: url(../img/svg/pagination-arrow.svg) no-repeat
+      & + li::before
+        display: none
+    &__next
+      transform: rotate(180deg)
+      
+  &-filter
+    &__btn
+      text-transform: uppercase
+      font-size: 24px
+      font-weight: 600
+      color: #e07496
+      cursor: pointer
+      @include flexbox
+      align-items: center
+      &::before
+        content: ''
+        width: 26px
+        height: 26px
+        display: block
+        margin-right: 14px
+        background: url(../img/svg/filter.svg) no-repeat
