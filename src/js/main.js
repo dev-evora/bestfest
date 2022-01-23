@@ -87,9 +87,11 @@ $(function () {
 
 	$('.builder-dishes__list li').first().trigger('click')
 
-	$('.builder-service__list li').click(function(){
+	$('.builder-service__list li, .builder-sidebar .order-service__title a').click(function(){
+		let id = $(this).attr('data-service-id')
+
 		$('.builder-service__list li').removeClass('active')
-		$(this).addClass('active')
+		$('.builder-service__list li[data-service-id='+id+']').addClass('active')
 	})
 
 	$('.builder-service__list li').first().trigger('click')
