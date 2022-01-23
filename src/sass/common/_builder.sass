@@ -89,11 +89,29 @@
     font-weight: 300
     margin-top: 30px
 
-  &-service-title
-    font-size: 48px
-    font-weight: 300
-    margin-top: 75px
-
+  &-service
+    &-title
+      font-size: 48px
+      font-weight: 300
+      margin-top: 75px
+    &__list
+      @include flexbox
+      align-items: flex-start
+      margin-right: -60px
+      margin-top: 20px
+      li
+        cursor: pointer
+        font-size: 14px
+        font-weight: 300
+        padding: 10px 0
+        margin-right: 60px
+        border-bottom: 4px solid transparent
+        transition: .3s
+        &:hover
+          color: #788e39
+        &.active
+          color: #788e39
+          border-bottom: 4px solid #788E39
   &-item
     margin-right: 30px
     margin-top: 30px

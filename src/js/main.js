@@ -86,6 +86,13 @@ $(function () {
 	})
 
 	$('.builder-dishes__list li').first().trigger('click')
+
+	$('.builder-service__list li').click(function(){
+		$('.builder-service__list li').removeClass('active')
+		$(this).addClass('active')
+	})
+
+	$('.builder-service__list li').first().trigger('click')
 	
 });
 
