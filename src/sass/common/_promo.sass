@@ -1,6 +1,8 @@
 .promo
   margin-top: 50px
   height: 630px
+  .container
+    z-index: 6
   &-content
     &.purple
       .promo-content__title
@@ -19,7 +21,6 @@
       text-transform: uppercase
       transition: .3s
     &__badge
-      background: #000
       color: #fff
       padding: 20px 50px
       padding-right: 100px
@@ -76,3 +77,6 @@
       z-index: 20
       cursor: pointer
       margin: auto 0
+
+  & + .bestmenu
+    margin-bottom: 25px

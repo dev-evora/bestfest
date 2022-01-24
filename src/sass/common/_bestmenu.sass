@@ -1,0 +1,52 @@
+.bestmenu
+  form
+    background: #b7cc7e
+    padding: 60px 50px
+    padding-left: 90px
+    border-radius: 300px
+    border-top: 7px solid #A5B96E
+    border-bottom: 7px solid #A5B96E
+    position: relative
+    @include flexbox
+    align-items: flex-start
+  h3
+    font-weight: 700
+    font-size: 36px
+    line-height: 0.9
+    color: #758842
+    max-width: 265px
+  &-form
+    @include flexbox
+    align-items: center
+    width: calc(100% - 265px - 30px)
+    margin-left: auto
+    margin-top: 25px
+    input
+      height: 58px
+      border: 0
+      border-radius: 0
+      border-bottom: 1px solid #758842
+      margin-right: 40px
+      flex: 1
+      font-size: 18px
+      font-weight: 300
+      color: #758842
+      background: transparent
+      @include placeholder
+        color: #758842
+    button
+      height: 58px
+      padding: 0 17px
+      border-radius: 58px
+      color: #fff
+      background: #758842
+      font-weight: 600
+      cursor: pointer
+      border: 0
+    p
+      width: 100%
+      font-size: 14px
+      margin-top: 20px
+      color: #758842
+      font-weight: 300
+      line-height: 0.9
