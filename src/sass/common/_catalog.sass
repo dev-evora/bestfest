@@ -5,6 +5,33 @@
     align-items: flex-start
   &-sidebar
     width: 270px
+    position: relative
+    &__btn
+      position: absolute
+      z-index: 100
+      border: 0
+      cursor: pointer
+      right: -120px
+      width: 120px
+      height: 46px
+      border-radius: 10px
+      background: #e07496
+      color: #fff
+      font-size: 16px
+      font-weight: 600
+      display: none
+      margin-top: -15px
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        margin: auto 0
+        left: -6px
+        width: 16px
+        height: 16px
+        background: #e07496
+        transform: rotate(45deg)
     &__reset
       margin-bottom: 20px
       font-size: 14px

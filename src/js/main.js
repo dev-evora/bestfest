@@ -53,6 +53,7 @@ $(function () {
 
 	$('.catalog-sidebar__reset').click(function(){
 		$('.catalog-sidebar')[0].reset();
+		$('.catalog-sidebar__btn').hide()
 	});
 
 	$('.lk-order').click(function(){
@@ -117,6 +118,14 @@ $(function () {
 			$(item).find('h4').removeClass('gray')
 		}
 
+	})
+
+	$('.catalog-sidebar__content label input').click(function(){
+		let pos = $(this).position().top,
+				btn = $('.catalog-sidebar__btn')
+		// console.log(pos)
+		btn.css('top', pos)
+		btn.show()
 	})
 	
 });
