@@ -560,8 +560,6 @@ const promoSlider = () => {
 					desc 	= slide.attr('data-desc'),
 					color = slide.attr('data-color')
 
-			console.log(title, badge, desc, color)
-
 			$('.promo-content__title').text(title)
 			$('.promo-content__badge').text(badge)
 			$('.promo-content__desc').text(desc)
