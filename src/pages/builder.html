@@ -119,7 +119,132 @@
       <div class="builder-sidebar">
         <div class="order-second-scroll">
 
-          <div class="order-set">
+          <div class="order-comp">
+            <h3>Состав набора:</h3>
+
+            <div class="order-comp__section">
+              <div class="order-comp__section-head">
+                <h4>Холодные закуски</h4>
+                <div class="order-comp__section-info">
+                  <div class="order-comp__section-add">Добавить в меню</div>
+                  <div class="order-comp__section-all">
+                    <p>Выбрано пунктов: <span></span></p>
+                    <div class="order-comp__section-delete">Очистить</div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-comp__section-none">Ничего не выбрано</div>
+              <div class="order-comp__section-content">
+                {% include 'common/item-order.html' %}
+                {% include 'common/item-order.html' %}
+              </div>
+            </div>
+
+            <div class="order-comp__section">
+              <div class="order-comp__section-head">
+                <h4>Супы</h4>
+                <div class="order-comp__section-info">
+                  <div class="order-comp__section-add">Добавить в меню</div>
+                  <div class="order-comp__section-all">
+                    <p>Выбрано пунктов: <span></span></p>
+                    <div class="order-comp__section-delete">Очистить</div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-comp__section-none">Ничего не выбрано</div>
+              <div class="order-comp__section-content">
+                {% include 'common/item-order.html' %}
+              </div>
+            </div>
+
+            <div class="order-comp__section">
+              <div class="order-comp__section-head">
+                <h4>Горячие блюда</h4>
+                <div class="order-comp__section-info">
+                  <div class="order-comp__section-add">Добавить в меню</div>
+                  <div class="order-comp__section-all">
+                    <p>Выбрано пунктов: <span></span></p>
+                    <div class="order-comp__section-delete">Очистить</div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-comp__section-none">Ничего не выбрано</div>
+              <div class="order-comp__section-content"></div>
+            </div>
+
+            <div class="order-comp__section">
+              <div class="order-comp__section-head">
+                <h4>Холодные закуски</h4>
+                <div class="order-comp__section-info">
+                  <div class="order-comp__section-add">Добавить в меню</div>
+                  <div class="order-comp__section-all">
+                    <p>Выбрано пунктов: <span></span></p>
+                    <div class="order-comp__section-delete">Очистить</div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-comp__section-none">Ничего не выбрано</div>
+              <div class="order-comp__section-content"></div>
+            </div>
+
+            <div class="order-comp__section">
+              <div class="order-comp__section-head">
+                <h4>Десерты</h4>
+                <div class="order-comp__section-info">
+                  <div class="order-comp__section-add">Добавить в меню</div>
+                  <div class="order-comp__section-all">
+                    <p>Выбрано пунктов: <span></span></p>
+                    <div class="order-comp__section-delete">Очистить</div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-comp__section-none">Ничего не выбрано</div>
+              <div class="order-comp__section-content"></div>
+            </div>
+
+            <div class="order-comp__section">
+              <div class="order-comp__section-head">
+                <h4>Выпечка</h4>
+                <div class="order-comp__section-info">
+                  <div class="order-comp__section-add">Добавить в меню</div>
+                  <div class="order-comp__section-all">
+                    <p>Выбрано пунктов: <span></span></p>
+                    <div class="order-comp__section-delete">Очистить</div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-comp__section-none">Ничего не выбрано</div>
+              <div class="order-comp__section-content"></div>
+            </div>
+
+            <div class="order-comp__section">
+              <div class="order-comp__section-head">
+                <h4>Напитки</h4>
+                <div class="order-comp__section-info">
+                  <div class="order-comp__section-add">Добавить в меню</div>
+                  <div class="order-comp__section-all">
+                    <p>Выбрано пунктов: <span></span></p>
+                    <div class="order-comp__section-delete">Очистить</div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-comp__section-none">Ничего не выбрано</div>
+              <div class="order-comp__section-content"></div>
+            </div>
+
+            <div class="order-total">
+              <div class="order-total__out">
+                <p>Общий выход:</p>
+                <b>8,25 кг<br> 8,25 л</b>
+              </div>
+              <div class="order-total__out">
+                <p>На человека:</p>
+                <b>800 г<br> 800 мл</b>
+              </div>
+            </div>
+          </div>
+
+          {# <div class="order-set">
             <h3>Ваш заказ:</h3>
             <h4>Набор: Название набора</h4>
             {% include 'common/item-order.html' %}
@@ -135,7 +260,7 @@
                 <b>800 г<br> 800 мл</b>
               </div>
             </div>
-          </div>
+          </div> #}
 
           <div class="order-service">
             <h3>Дополнительные услуги:</h3>

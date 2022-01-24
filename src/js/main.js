@@ -95,6 +95,29 @@ $(function () {
 	})
 
 	$('.builder-service__list li').first().trigger('click')
+
+	$('.order-comp__section').each(function(i, item){
+		let num
+		
+		$(item).find('.order-item').each(function(i){
+			num = i + 1
+		})
+
+		$(item).find('.order-comp__section-all span').html(num)
+
+		if(num == undefined){
+			$(item).find('.order-comp__section-add').removeClass('hide')
+			$(item).find('.order-comp__section-all').addClass('hide')
+			$(item).find('.order-comp__section-none').removeClass('hide')
+			$(item).find('h4').addClass('gray')
+		}else{
+			$(item).find('.order-comp__section-add').addClass('hide')
+			$(item).find('.order-comp__section-all').removeClass('hide')
+			$(item).find('.order-comp__section-none').addClass('hide')
+			$(item).find('h4').removeClass('gray')
+		}
+
+	})
 	
 });
 
