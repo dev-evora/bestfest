@@ -1,0 +1,78 @@
+.promo
+  margin-top: 50px
+  height: 630px
+  &-content
+    &.purple
+      .promo-content__title
+        color: #e07496
+      .promo-content__badge
+        background: #DAAEC2
+    &.green
+      .promo-content__title
+        color: #A5B96E
+      .promo-content__badge
+        background: #C2CAAD
+    &__title
+      min-height: 240px
+      font-weight: 300
+      font-size: 90px
+      text-transform: uppercase
+      transition: .3s
+    &__badge
+      background: #000
+      color: #fff
+      padding: 20px 50px
+      padding-right: 100px
+      border-radius: 27px
+      font-weight: 300
+      font-size: 14px
+      line-height: 1.3
+      max-width: 400px
+      margin-left: 20px
+      transition: .3s
+    &__desc
+      max-width: 230px
+      font-size: 14px
+      font-weight: 300
+      line-height: 1.6
+      margin-top: 60px
+      margin-left: 90px
+  &-slider
+    position: absolute
+    left: 0
+    right: 0
+    top: 105px
+    height: 625px
+    overflow: hidden
+    img
+      max-width: initial
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%) scale(0.4)
+      transition: .3s
+      opacity: 0
+      width: 595px
+      filter: blur(4px)
+    .swiper-slide
+      position: relative
+      // img
+      //   transform: scale(0.5) translate(-50%, -50%)
+      &-active
+        img
+          transform: translate(-50%, -50%) scale(1)
+          opacity: 1
+          filter: blur(0)
+      &-next img
+        opacity: 1
+    &__next
+      position: absolute
+      top: 0
+      bottom: 0
+      left: calc(50% + 300px + 25px)
+      width: 30px
+      height: 28px
+      background: url(../img/svg/promo-arrow.svg) no-repeat
+      z-index: 20
+      cursor: pointer
+      margin: auto 0

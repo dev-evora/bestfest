@@ -300,6 +300,7 @@ const initSliders = () => {
 	catalogActionSlider()
 	itemSlider()
 	cardPhotoSlider()
+	promoSlider()
 }
 
 const slideCounter = (slider, count) => {
@@ -515,6 +516,57 @@ const cardPhotoSlider = () => {
 			observer: true,
 			observeParents: true,
 		})
+
+		console.log('init swiper')
+		
+	}
+
+}
+
+const promoSlider = () => {
+
+	if($('.promo-slider').length) {
+
+		let loopSlides
+		$('.promo-slider .swiper-slide').each(function(i){
+			loopSlides = i + 1
+		})
+
+		let main = new Swiper('.promo-slider', {
+			// autoplay: {
+			// 	delay: 5000,
+			// 	disableOnInteraction: false,
+			// },
+			observer: true,
+			observeParents: true,
+			slidesPerView: 3,
+			loop: true,
+			loopedSlides: loopSlides,
+			centeredSlides: true,
+			spaceBetween: 250,
+			on: {
+				init: changeText,
+				slideChangeTransitionStart: changeText
+			},
+			navigation: {
+				nextEl: '.promo-slider__next',
+			},
+		})
+
+		function changeText() {
+			let slide = this.$el.find('.swiper-slide-active'),
+					title = slide.attr('data-title'),
+					badge = slide.attr('data-badge'),
+					desc 	= slide.attr('data-desc'),
+					color = slide.attr('data-color')
+
+			console.log(title, badge, desc, color)
+
+			$('.promo-content__title').text(title)
+			$('.promo-content__badge').text(badge)
+			$('.promo-content__desc').text(desc)
+			$('.promo-content').attr('class', 'promo-content ' + color)
+		}
 
 		console.log('init swiper')
 		
