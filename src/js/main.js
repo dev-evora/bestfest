@@ -572,15 +572,7 @@ const promoSlider = () => {
 		})
 
 		function changeText() {
-			let slide = this.$el.find('.swiper-slide-active'),
-					title = slide.attr('data-title'),
-					badge = slide.attr('data-badge'),
-					desc 	= slide.attr('data-desc'),
-					color = slide.attr('data-color')
-
-			$('.promo-content__title').text(title)
-			$('.promo-content__badge').text(badge)
-			$('.promo-content__desc').text(desc)
+			let color = this.$el.find('.swiper-slide-active').attr('data-color')
 			$('.promo-content').attr('class', 'promo-content ' + color)
 		}
 
