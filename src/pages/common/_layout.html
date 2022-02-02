@@ -9,7 +9,10 @@
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- viewport fix -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <script>!function() { var e=screen.width,t=document.querySelector('meta[name="viewport"]'),n=document.createElement("meta");n.setAttribute("name","viewport"),n.setAttribute("content","user-scalable=no, width="+(e<=475?"475":"device-width")),document.head.replaceChild(n,t) } ();</script>
+    <!-- end viewport fix -->
     <title>{{ site_title }}</title>
     <link rel="stylesheet" href="css/main.min.css?v=hash">
   </head>

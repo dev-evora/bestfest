@@ -382,13 +382,18 @@ const cateringSlider = () => {
 
 		let main = new Swiper('.catering-format__wrap', {
 			slidesPerView: 1,
-			spaceBetween: 30,
+			spaceBetween: 15,
 			observer: true,
 			observeParents: true,
 			navigation: {
 				nextEl: ".catering-format__arrow-next",
 				prevEl: ".catering-format__arrow-prev",
-			}
+			},
+			breakpoints: {
+				768: {
+					spaceBetween: 30
+				}
+			},
 		})
 
 		slideCounter(main, '.catering-format__count')
@@ -428,7 +433,7 @@ const clientSlider = () => {
 	if($('.client-slider').length) {
 
 		let main = new Swiper('.client-slider', {
-			slidesPerView: 6,
+			slidesPerView: 2,
 			spaceBetween: 10,
 			// lazy: true,
 			loop: true,
@@ -437,6 +442,20 @@ const clientSlider = () => {
 			navigation: {
 				nextEl: ".client-arrow__next",
 				prevEl: ".client-arrow__prev",
+			},
+			breakpoints: {
+				576: {
+					slidesPerView: 3,
+				},
+				768: {
+					slidesPerView: 4,
+				},
+				1024: {
+					slidesPerView: 5,
+				},
+				1200: {
+					slidesPerView: 6
+				}
 			},
 		})
 
