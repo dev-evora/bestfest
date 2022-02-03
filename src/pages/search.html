@@ -1,0 +1,38 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Поиск' %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2>Поиск</h2>
+  </div>
+</section>
+
+<section class="search">
+  <div class="container">
+    <form action="#" method="post">
+      <input type="text" placeholder="Поиск" />
+      <button>Искать</button>
+    </form>
+    <h3>Результат поиска: 3</h3>
+    <h4>Вы пока ничего искали</h4>
+    <h4>Ничего не найдено, попробуйте переформулировать или воспользуйтесь каталогом</h4>
+  </div>
+</section>
+
+<section class="favorites">
+  <div class="container">
+    <div class="favorites-list">
+      {% include 'common/item.html' %}
+      {% include 'common/item.html' %}
+      {% include 'common/item.html' %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

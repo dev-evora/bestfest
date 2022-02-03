@@ -18,7 +18,11 @@
   <div class="container">
     <div class="catalog-row">
 
-      {% include 'common/catalog-sidebar.html' %}
+      <div class="builder-filter__btn catalog-filter__btn" data-fancybox data-src="#catalog-sidebar">Фильтр</div>
+      
+      <div id="catalog-sidebar">
+        {% include 'common/catalog-sidebar.html' %}
+      </div>
 
       <div class="catalog-main">
 

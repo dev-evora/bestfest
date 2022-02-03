@@ -3,7 +3,11 @@
     max-width: 768px
 
   .action-item__img h4, .any-kitchen h2, .builder-take__text h2, .catering-format h2, .client h2, .make-order h2, .make-order__or h3, .reason-event__item h2, .services-title,
-  .partner-block h2
+  .partner-block h2,
+  .card-rec h2,
+  .about-food__left h2,
+  .delivery-price h2,
+  .receipt h1
     font-size: 36px
 
   .header-contact__menu li
@@ -99,3 +103,138 @@
     width: calc(100% / 2 - 30px)
   .make-order__list li::before
     display: none
+
+  .menu-section
+    width: 100% 
+  
+  .menu
+    padding-bottom: 0
+
+  .head
+    padding-top: 10px
+    padding-bottom: 30px
+  .head-breadcrumbs
+    margin-bottom: 20px
+  .head h2
+    font-size: 36px
+  .head h3
+    margin-top: 10px
+    font-size: 18px
+
+  .catalog-row .catalog-sidebar
+    width: 280px
+
+  #catalog-sidebar
+    padding: 20px
+    display: none
+
+  .catalog-filter__btn
+    display: flex !important
+    margin-bottom: 30px
+
+  .catalog-sidebar__btn
+    position: initial
+    width: 100%
+    display: block
+    margin-top: 0px
+    &::before
+      display: none
+  
+  .catalog-main
+    width: 100%
+
+  .card-main
+    width: 100%
+    padding-right: 0
+  
+  .card-second
+    width: 100%
+    margin-top: 40px
+  .card-second__content
+    overflow: initial
+    @include flexbox
+    align-items: flex-start
+  .card-service
+    width: 50%
+    margin-top: 0
+    margin-bottom: 40px
+
+  .favorites-list .item,
+  .action-list .action-link
+    width: calc(100% / 3 - 20px)
+
+  .about-list li
+    width: calc(100% / 3 - 10px)
+    margin: 10px 5px 0
+  .about-list
+    margin: 10px -5px 0
+
+  .about-food__left
+    width: 100%
+    padding: 0
+
+  .about-food__top
+    margin-bottom: 20px
+  .about-food__left img
+    display: none
+  .about-food__right
+    width: 100%
+    padding: 0
+    margin-top: 40px
+  .about-food__right::before
+    display: none
+
+  .about-complex
+    padding: 0
+    margin-top: 40px
+  .about-complex__img
+    top: 0
+    width: 300px
+  .about-complex__left
+    width: calc(100% - 300px - 40px)
+
+  .delivery-time__item
+    padding: 10px 25px
+    margin-right: 25px
+  .delivery-time__item h2
+    font-size: 18px
+  .delivery-time__item p
+    font-size: 14px
+  .delivery-time__warning
+    flex: 1
+  
+  .delivery-article__text
+    width: 100%
+  
+  .delivery-article__img
+    width: 100%
+    order: 1 !important
+    margin-top: 40px
+
+  .delivery-price__item
+    width: calc(100% - 50px)
+    margin-top: 30px
+
+  .footer-menu
+    display: none
+  .footer-nav
+    @include flexbox
+    align-items: flex-start
+    margin: 20px 0 30px
+  .footer-nav li
+    margin-top: 10px
+    margin-right: 20px
+  
+  .footer-contact
+    margin-top: 30px
+  .footer-contact__email
+    margin-bottom: 30px
+
+  .page-404__img-3
+    left: -100px
+  .page-404__img-1
+    right: -100px
+  
+  .receipt h2,
+  .receipt-link
+    font-size: 18px

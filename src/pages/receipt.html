@@ -1,0 +1,20 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Чек' %}
+
+{% block content %}
+
+<section class="receipt">
+  <div class="container">
+    <img src="img/receipt-1.png" class="receipt-img-1" alt="">
+    <img src="img/receipt-2.png" class="receipt-img-2" alt="">
+    <img src="img/receipt-3.png" class="receipt-img-3" alt="">
+    <h1>Ваш заказ № 762867 оплачен</h1>
+    <h2>Наш менеджер свяжется с вами для подтверждения заказа в течение 30 минут.</h2>
+    <a href="#" class="receipt-link">Ссылка на чек</a>
+    <div class="btn-wrap">
+      <a href="#" class="btn btn-pink">Вернуться к меню</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

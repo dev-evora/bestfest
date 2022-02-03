@@ -79,7 +79,7 @@ $(function () {
 		$('> p', this).hide()
 	})
 
-	scroll('.card-second__content')
+	if($(window).width >= 1024) scroll('.card-second__content')
 	scroll('.order-second-scroll')
 	scroll('.header-menu__scroll')
 
@@ -494,11 +494,16 @@ const catalogActionSlider = () => {
 		let main = new Swiper('.catalog-action', {
 			observer: true,
 			observeParents: true,
-			slidesPerView: 3,
+			slidesPerView: 2,
 			spaceBetween: 20,
 			navigation: {
 				prevEl: ".catalog-action__arrow-prev",
 				nextEl: ".catalog-action__arrow-next",
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 3,
+				}
 			},
 		})
 

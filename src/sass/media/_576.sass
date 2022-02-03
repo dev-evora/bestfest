@@ -2,6 +2,16 @@
   .container
     max-width: 475px
 
+  .action-item__text h2,
+  .action-item__img h4, .any-kitchen h2, .catering-format h2, .client h2, .make-order h2, .make-order__or h3, .partner-block h2, .reason-event__item h2, .services-title,
+  .card-rec h2,
+  .about-food__left h2,
+  .about-food__title,
+  .delivery-article__text h2,
+  .delivery-price h2,
+  .receipt h1
+    font-size: 28px
+
   .builder-take__img
     position: absolute
     top: 0
@@ -22,10 +32,6 @@
     left: 10px
     width: auto
 
-  .action-item__text h2,
-  .action-item__img h4, .any-kitchen h2, .catering-format h2, .client h2, .make-order h2, .make-order__or h3, .partner-block h2, .reason-event__item h2, .services-title
-    font-size: 28px
-
   .reason-event__item h2
     max-width: 250px
 
@@ -40,3 +46,59 @@
 
   .make-order__or h3
     font-size: 24px
+
+  .menu-item
+    margin: 0 5px 10px
+  .menu-item,
+  .menu-section:nth-child(2n) .menu-item:nth-child(1), .menu-section:nth-child(2n) .menu-item:nth-child(2), .menu-section:nth-child(2n) .menu-item:nth-child(3)
+    width: calc(100% / 3 - 10px)
+  .menu-section .menu-item:nth-child(1), .menu-section .menu-item:nth-child(2), .menu-section:nth-child(2n) .menu-item
+    width: calc(100% / 2 - 10px)
+
+  .catalog-main .item
+    width: calc(100% - 20px)
+  
+  .catalog-banner__menu
+    justify-content: center
+    text-align: center
+  .catalog-banner__menu a
+    margin-top: 20px
+
+  
+  .card-item img,
+  .card-item__col
+    width: 80px
+  
+  .card-item img
+    height: 80px
+
+  .favorites-list .item,
+  .action-list .action-link
+    width: calc(100% - 20px)
+
+  .action-link
+    height: 220px
+
+  .about-list li
+    width: calc(100% - 10px)
+
+  .delivery-time__warning
+    max-width: initial 
+    flex: initial
+    width: 100%
+  .delivery-time__row
+    justify-content: space-between
+  .delivery-time__item
+    margin: 0
+    width: 49%
+    border-radius: 10px
+    padding: 10px
+
+  .delivery-article__img
+    height: 220px
+    margin-top: 30px
+
+  .receipt
+    padding-top: 60px
+  .receipt-img-2
+    right: 80px
