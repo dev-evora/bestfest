@@ -95,23 +95,23 @@
       font-weight: 300
       margin-top: 75px
     &__list
+      color: #828282
+      font-size: 14px
+      font-weight: 300
       @include flexbox
       align-items: flex-start
-      margin-right: -60px
-      margin-top: 20px
+      margin-right: -40px
       li
+        margin-top: 30px
+        margin-right: 40px
         cursor: pointer
-        font-size: 14px
-        font-weight: 300
-        padding: 10px 0
-        margin-right: 60px
-        border-bottom: 4px solid transparent
-        transition: .3s
-        &:hover
-          color: #788e39
+        border-bottom: 1px solid transparent
+        transition: .2s
         &.active
-          color: #788e39
-          border-bottom: 4px solid #788E39
+          color: #a5b96e
+          border-bottom: 1px solid #A5B96E
+        &:hover
+          color: #a5b96e
   &-item
     margin-right: 30px
     margin-top: 30px
@@ -200,6 +200,24 @@
         display: block
         margin-right: 14px
         background: url(../img/svg/filter.svg) no-repeat
+
+.builder-sidebar__open
+  position: fixed
+  z-index: 101
+  width: 345px
+  height: 50px
+  background: #a5b96e
+  bottom: 30px
+  left: 0
+  right: 0
+  margin: 0 auto
+  @include flexbox
+  align-items: center
+  justify-content: center
+  color: #fff
+  font-weight: 500
+  border-radius: 50px
+  display: none
 
 #builder-filter
   display: none

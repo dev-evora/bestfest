@@ -67,7 +67,7 @@
 
         <div class="builder-control">
           <div class="builder-filter__btn" data-fancybox data-src="#builder-filter">Фильтр</div>
-          <ul class="builder-pagination">
+          {# <ul class="builder-pagination">
             <li class="builder-pagination__arrow builder-pagination__prev"><a href="#"></a></li>
             <li class="active"><a href="#">1</a></li>
             <li><a href="#">2</a></li>
@@ -75,7 +75,7 @@
             <li><a href="#">5</a></li>
             <li><a href="#">6</a></li>
             <li class="builder-pagination__arrow builder-pagination__next"><a href="#"></a></li>
-          </ul>
+          </ul> #}
         </div>
 
         <h2 class="builder-selected-title"></h2>
@@ -91,6 +91,8 @@
           {% include 'common/item-builder.html' %}
           {% include 'common/item-builder.html' %}
         </div>
+
+        <div class="btn-wrap catalog-load"><a href="#" class="btn btn-pink">Загрузить еще (56)</a></div>
 
         <h2 class="builder-service-title">Дополнительные услуги:</h2>
 
@@ -114,7 +116,12 @@
           {% include 'common/item-builder.html' %}
         </div>
 
+        <div class="btn-wrap catalog-load"><a href="#" class="btn btn-pink">Загрузить еще (56)</a></div>
+
       </div>
+
+      <div class="builder-sidebar__open">Посмотреть состав набора</div>
+      <div class="builder-sidebar__bg"></div>
       
       <div class="builder-sidebar">
         <div class="order-second-scroll">

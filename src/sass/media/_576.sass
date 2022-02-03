@@ -9,7 +9,9 @@
   .about-food__title,
   .delivery-article__text h2,
   .delivery-price h2,
-  .receipt h1
+  .receipt h1,
+  .builder-selected-title,
+  .builder-service-title
     font-size: 28px
 
   .builder-take__img
@@ -102,3 +104,37 @@
     padding-top: 60px
   .receipt-img-2
     right: 80px
+
+  .lk-order__table-row .lk-order__table-col,
+  .lk-order__table-col
+    width: calc((100% - 25px) / 3)
+    &:first-child
+      width: 100%
+      max-width: 100%
+      flex: initial
+      padding-left: 25px
+      padding-bottom: 5px
+    &:nth-child(2)
+      margin-left: 25px
+
+  .lk-order__table-col,
+  .lk-order__table-delivery .lk-order__table-col
+    font-size: 14px
+    width: calc(100% / 3)
+    &:first-child
+      padding-left: 0
+    &:nth-child(2)
+      margin: 0
+  
+  .lk-order__return
+    width: 150px
+    font-size: 14px
+
+  .builder-item
+    margin-right: 10px
+    width: calc(100% / 2 - 10px)
+  .builder-item-row
+    margin-right: -10px
+
+  .builder-how__img
+    right: -250px

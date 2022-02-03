@@ -79,9 +79,9 @@ $(function () {
 		$('> p', this).hide()
 	})
 
-	if($(window).width >= 1024) scroll('.card-second__content')
-	scroll('.order-second-scroll')
-	scroll('.header-menu__scroll')
+	if($(window).width() >= 1024) scroll('.card-second__content')
+	if($(window).width() >= 1024) scroll('.order-second-scroll')
+	if($(window).width() >= 1024) scroll('.header-menu__scroll')
 
 	$('.builder-dishes__list li').click(function(){
 		$('.builder-dishes__list li').removeClass('active')
@@ -135,6 +135,13 @@ $(function () {
 		$('+ .header-menu__list', this).slideToggle()
 		$('.header-menu__section b').removeClass('active')
 		$(this).addClass('active')
+	})
+	
+	$('.builder-sidebar__open').click(function(){
+		$(this).toggleClass('open')
+		$('.builder-sidebar').toggleClass('open')
+		$('.builder-sidebar__bg').fadeToggle(300)
+		$('body').toggleClass('hide')
 	})
 	
 });

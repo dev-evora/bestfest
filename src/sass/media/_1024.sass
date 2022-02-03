@@ -7,7 +7,9 @@
   .card-rec h2,
   .about-food__left h2,
   .delivery-price h2,
-  .receipt h1
+  .receipt h1,
+  .builder-selected-title,
+  .builder-service-title
     font-size: 36px
 
   .header-contact__menu li
@@ -238,3 +240,107 @@
   .receipt h2,
   .receipt-link
     font-size: 18px
+
+  .lk-top__user img
+    width: 40px
+    height: 40px
+    margin-right: 10px
+  .lk-top__user p
+    font-size: 16px
+  .lk-top__nav li a
+    font-size: 14px
+    img
+      width: 24px
+      margin-right: 10px
+
+  .lk-order
+    padding: 30px
+  .lk-setting
+    padding: 30px
+  .lk-setting__col
+    max-width: 100%
+    margin-right: 0
+
+  .order-main
+    flex: initial
+    width: 100%
+    margin-top: 40px
+  
+  .order-second
+    width: 100%
+    margin: 0
+    order: -1
+  .order-second-scroll
+    overflow: initial !important
+    @include flexbox
+    align-items: flex-start
+
+  .order-label,
+  .order-label-group,
+  .order-textarea
+    max-width: 100%
+    width: 100%
+
+  .order-end>div
+    width: 100%
+
+  .order-payment
+    width: 100%
+    order: 1
+    margin-top: 40px
+  .order-promo
+    width: 100%
+    order: 2
+  
+  .order-set
+    margin-top: 0
+  .order-service,
+  .order-set
+    width: 100%
+
+  .builder-main
+    width: 100%
+
+  .builder .container
+    z-index: 6
+  .builder-sidebar
+    width: initial
+    left: 0
+    right: 0
+    background: #fff
+    position: fixed
+    bottom: 0
+    top: 200px
+    z-index: 100
+    margin: 0
+    border-top-left-radius: 10px
+    border-top-right-radius: 10px
+    overflow-y: scroll
+    padding: 30px 0
+    transform: translateY(100%)
+    transition: .3s
+    &.open
+      transform: translateY(0%)
+  .order-second-scroll
+    width: 450px
+    margin: 0 auto
+
+  .builder-sidebar__open
+    display: flex
+    transition: .3s
+    &.open
+      bottom: initial
+      top: 140px
+
+  .builder-sidebar__bg
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(0,0,0,.4)
+    z-index: 99
+    display: none
+  
+  .hide
+    overflow: hidden
