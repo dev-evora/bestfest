@@ -251,24 +251,6 @@
             </div>
           </div>
 
-          {# <div class="order-set">
-            <h3>Ваш заказ:</h3>
-            <h4>Набор: Название набора</h4>
-            {% include 'common/item-order.html' %}
-            {% include 'common/item-order.html' %}
-            {% include 'common/item-order.html' %}
-            <div class="order-total">
-              <div class="order-total__out">
-                <p>Общий выход:</p>
-                <b>8,25 кг<br> 8,25 л</b>
-              </div>
-              <div class="order-total__out">
-                <p>На человека:</p>
-                <b>800 г<br> 800 мл</b>
-              </div>
-            </div>
-          </div> #}
-
           <div class="order-service">
             <h3>Дополнительные услуги:</h3>
 
@@ -277,6 +259,54 @@
               <b>Посуда</b>
               <a href="javascript:;" data-service-id="1">Выбрать</a>
             </div>
+            
+            <div class="order-service__mes">*Дополнительная смена посуды - нажмите <b>x2</b></div>
+
+            <div class="order-service__list">
+
+              <div class="order-service__item">
+                <p>Тарелка закусочная</p>
+                <div class="order-service__item-info">
+                  <div class="item-count">
+                    <div class="item-count__minus">-</div>
+                    <input type="number" class="item-count__number" value="1" />
+                    <div class="item-count__plus">+</div>
+                  </div>
+                  <label><input type="checkbox" /><p></p><b>x2</b></label>
+                  <b>12 030 ₽</b>
+                  <div class="order-service__item-del"></div>
+                </div>
+              </div>
+
+              <div class="order-service__item">
+                <p>Тарелка закусочная</p>
+                <div class="order-service__item-info">
+                  <div class="item-count">
+                    <div class="item-count__minus">-</div>
+                    <input type="number" class="item-count__number" value="1" />
+                    <div class="item-count__plus">+</div>
+                  </div>
+                  <label><input type="checkbox" /><p></p><b>x2</b></label>
+                  <b>12 030 ₽</b>
+                  <div class="order-service__item-del"></div>
+                </div>
+              </div>
+
+              <div class="order-service__item">
+                <p>Тарелка закусочная</p>
+                <div class="order-service__item-info">
+                  <div class="item-count">
+                    <div class="item-count__minus">-</div>
+                    <input type="number" class="item-count__number" value="1" />
+                    <div class="item-count__plus">+</div>
+                  </div>
+                  <label><input type="checkbox" /><p></p><b>x2</b></label>
+                  <b>12 030 ₽</b>
+                  <div class="order-service__item-del"></div>
+                </div>
+              </div>
+
+            </div>
 
             <div class="order-service__title">
               <img src="img/svg/order-service-2.svg" alt="">
@@ -284,11 +314,15 @@
               <a href="javascript:;" data-service-id="2">Выбрать</a>
             </div>
 
+            <div class="order-service__list"></div>
+
             <div class="order-service__title">
               <img src="img/svg/order-service-3.svg" alt="">
               <b>Аренда мебели</b>
               <a href="javascript:;" data-service-id="3">Выбрать</a>
             </div>
+
+            <div class="order-service__list"></div>
 
             <div class="order-service__title">
               <img src="img/svg/order-service-4.svg" alt="">
@@ -296,11 +330,16 @@
               <a href="javascript:;" data-service-id="4">Выбрать</a>
             </div>
 
+            <div class="order-service__list"></div>
+
             <div class="order-service__title">
               <img src="img/svg/order-service-5.svg" alt="">
               <b>Персонал</b>
               <a href="javascript:;" data-service-id="5">Выбрать</a>
             </div>
+
+            <div class="order-service__list"></div>
+
           </div>
 
           <div class="order-out">ИТОГ<span>120 000 ₽</span></div>
