@@ -4,8 +4,8 @@
     padding: 60px 50px
     padding-left: 90px
     border-radius: 300px
-    border-top: 7px solid #A5B96E
-    border-bottom: 7px solid #A5B96E
+    border-top: 7px solid $color-green
+    border-bottom: 7px solid $color-green
     position: relative
     @include flexbox
     align-items: flex-start
@@ -13,7 +13,7 @@
     font-weight: 700
     font-size: 36px
     line-height: 0.9
-    color: #758842
+    color: $color-dark-green
     max-width: 265px
   &-form
     @include flexbox
@@ -25,28 +25,31 @@
       height: 58px
       border: 0
       border-radius: 0
-      border-bottom: 1px solid #758842
+      border-bottom: 1px solid $color-dark-green
       margin-right: 40px
       flex: 1
       font-size: 18px
       font-weight: 300
-      color: #758842
+      color: $color-dark-green
       background: transparent
       @include placeholder
-        color: #758842
+        color: $color-dark-green
     button
       height: 58px
       padding: 0 17px
       border-radius: 58px
-      color: #fff
-      background: #758842
+      color: $color-white
+      background: $color-dark-green
       font-weight: 600
       cursor: pointer
       border: 0
+      transition: .2s
+      &:hover
+        background: $color-pink
     p
       width: 100%
       font-size: 14px
       margin-top: 20px
-      color: #758842
+      color: $color-dark-green
       font-weight: 300
       line-height: 0.9

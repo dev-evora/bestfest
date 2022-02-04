@@ -27,7 +27,7 @@
           width: 100%
           font-size: 64px
           font-weight: 700
-          color: #788E39
+          color: $color-dark-green
           margin-bottom: 10px
     &__img
       position: absolute
@@ -66,7 +66,7 @@
       font-weight: 600
       font-size: 24px
     &__list
-      color: #828282
+      color: $color-gray
       font-size: 14px
       font-weight: 300
       @include flexbox
@@ -79,10 +79,10 @@
         border-bottom: 1px solid transparent
         transition: .2s
         &.active
-          color: #a5b96e
-          border-bottom: 1px solid #A5B96E
+          color: $color-green
+          border-bottom: 1px solid $color-green
         &:hover
-          color: #a5b96e
+          color: $color-green
 
   &-selected-title
     font-size: 48px
@@ -95,7 +95,7 @@
       font-weight: 300
       margin-top: 75px
     &__list
-      color: #828282
+      color: $color-gray
       font-size: 14px
       font-weight: 300
       @include flexbox
@@ -108,10 +108,10 @@
         border-bottom: 1px solid transparent
         transition: .2s
         &.active
-          color: #a5b96e
-          border-bottom: 1px solid #A5B96E
+          color: $color-green
+          border-bottom: 1px solid $color-green
         &:hover
-          color: #a5b96e
+          color: $color-green
   &-item
     margin-right: 30px
     margin-top: 30px
@@ -131,14 +131,14 @@
       width: 24px
       height: 24px
       border-radius: 100%
-      background: #e07496
+      background: $color-pink
       z-index: 5
       cursor: pointer
       &::before, &::after
         content: ''
         width: 2px
         height: 14px
-        background: #fff
+        background: $color-white
         position: absolute
         top: 5px
         left: 11px
@@ -152,7 +152,7 @@
   &-pagination
     font-size: 16px
     font-weight: 600
-    color: #e07496
+    color: $color-pink
     @include flexbox
     align-items: center
     margin-left: auto
@@ -166,11 +166,11 @@
         width: 4px
         height: 4px
         border-radius: 4px
-        background: #e07496
+        background: $color-pink
         display: block
         margin-right: 15px
       &.active
-        color: #788e39
+        color: $color-dark-green
     &__arrow
       &::before
         display: none !important
@@ -189,7 +189,7 @@
       text-transform: uppercase
       font-size: 24px
       font-weight: 600
-      color: #e07496
+      color: $color-pink
       cursor: pointer
       @include flexbox
       align-items: center
@@ -206,7 +206,7 @@
   z-index: 101
   width: 345px
   height: 50px
-  background: #a5b96e
+  background: $color-green
   bottom: 30px
   left: 0
   right: 0
@@ -214,7 +214,7 @@
   @include flexbox
   align-items: center
   justify-content: center
-  color: #fff
+  color: $color-white
   font-weight: 500
   border-radius: 50px
   display: none

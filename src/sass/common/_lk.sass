@@ -28,7 +28,7 @@
         a
           @include flexbox
           align-items: center
-          color: #788e39
+          color: $color-dark-green
           img
             margin-right: 20px
           b
@@ -39,15 +39,15 @@
     h2
       margin-top: 80px
       text-transform: uppercase
-      color: #828282
+      color: $color-gray
       font-weight: 600
       &:first-child
         margin-top: 0
-        color: #e07496
+        color: $color-pink
 
 
   &-order
-    background: #fff
+    background: $color-white
     border-radius: 15px
     box-shadow: 0px 0px 146px rgba(0, 0, 0, 0.1)
     margin-top: 30px
@@ -65,7 +65,7 @@
       border-radius: 25px
       font-size: 14px
       font-weight: 300
-      color: #828282
+      color: $color-gray
       margin-top: 30px
       display: inline-block
       b
@@ -73,7 +73,7 @@
         color: $color-black
     &__return
       height: 36px
-      background: #788e39
+      background: $color-dark-green
       width: 220px
       border-radius: 58px
       display: block
@@ -81,9 +81,11 @@
       text-align: center
       line-height: 36px
       font-weight: 600
-      color: #fff
+      color: $color-white
       margin-top: -36px
       transition: .3s
+      &:hover
+        background: #df7495
     &.open
       cursor: default
       .lk-order__return
@@ -92,6 +94,8 @@
         line-height: 58px
         width: 180px
         background: #df7495
+        &:hover
+          background: $color-dark-green
     &__content
       display: none
       padding: 30px 0
@@ -143,9 +147,9 @@
           margin-left: auto
           font-weight: 300
           font-size: 24px
-          color: #828282
+          color: $color-gray
           span
-            color: #788e39
+            color: $color-dark-green
       &-delivery
         .lk-order__table-col:first-child
           font-weight: 600
@@ -164,7 +168,7 @@
 
 
   &-setting
-    background: #fff
+    background: $color-white
     border-radius: 15px
     box-shadow: 0px 0px 146px rgba(0, 0, 0, 0.1)
     margin-top: 30px

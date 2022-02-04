@@ -161,11 +161,17 @@
 <section class="card-rec">
   <div class="container">
     <h2>Так же вы можете попробовать:</h2>
-    <div class="row">
-      {% include 'common/item.html' %}
-      {% include 'common/item.html' %}
-      {% include 'common/item.html' %}
-      {% include 'common/item.html' %}
+    <div class="card-rec__slider">
+      <div class="card-rec__arrow card-rec__arrow-prev"></div>
+      <div class="card-rec__arrow card-rec__arrow-next"></div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">{% include 'common/item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item.html' %}</div>
+      </div>
     </div>
   </div>
 </section>

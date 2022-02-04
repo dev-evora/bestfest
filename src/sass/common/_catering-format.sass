@@ -18,14 +18,14 @@
         left: calc(100% + 35px)
         right: -10000px
         height: 1px
-        background: #000
+        background: $color-black
   .btn-wrap
     justify-content: center
     margin-top: 70px
   &__slider
     margin-top: 70px
     overflow: hidden
-    mask: linear-gradient(-90deg,rgba(0,0,0,0) 0,#000 10%)
+    mask: linear-gradient(-90deg,rgba(0,0,0,0) 0,$color-black 10%)
   &__wrap
     width: 220px
     // overflow: hidden
@@ -57,7 +57,7 @@
       left: 0
       right: 0
       bottom: 0
-      background: #000
+      background: $color-black
       opacity: 0
       z-index: -1
       transition: .2s
@@ -68,12 +68,12 @@
       right: 15px
       bottom: 15px
       left: 15px
-      border: 5px solid #fff
+      border: 5px solid $color-white
       z-index: -1
       opacity: 0
       transition: .2s
     &:hover
-      color: #fff
+      color: $color-white
       &::before
         opacity: 0.3
       &::after
@@ -111,7 +111,7 @@
       font-size: 16px
       font-weight: 600
       width: 25px
-      color: #bdbdbd
+      color: $color-light-gray
       margin: 0 3px
       &.this
         text-align: right
@@ -122,7 +122,7 @@
       content: ''
       width: 32px
       height: 1px
-      background: #bdbdbd
+      background: $color-light-gray
       position: absolute
       top: 0
       left: 0

@@ -326,6 +326,7 @@ const initSliders = () => {
 	itemSlider()
 	cardPhotoSlider()
 	promoSlider()
+	cardSlider()
 }
 
 const slideCounter = (slider, count) => {
@@ -609,6 +610,38 @@ const promoSlider = () => {
 
 		console.log('init swiper')
 		
+	}
+
+}
+
+const cardSlider = () => {
+
+	if($('.card-rec__slider').length) {
+
+		let main = new Swiper('.card-rec__slider', {
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 20,
+			navigation: {
+				prevEl: ".card-rec__arrow-prev",
+				nextEl: ".card-rec__arrow-next",
+			},
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+				},
+				768: {
+					slidesPerView: 3,
+				},
+				1024: {
+					slidesPerView: 4,
+				}
+			},
+		})
+
+		console.log('init swiper')
+
 	}
 
 }

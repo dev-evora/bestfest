@@ -30,7 +30,7 @@
         content: counter(order)
         font-size: 36px
         font-weight: 700
-        color: #788E39
+        color: $color-dark-green
         width: 35px
         display: inline-block
   &-link
@@ -58,31 +58,31 @@
         left: 61px
         bottom: 1px
         right: 1px
-        background: #fff
+        background: $color-white
         margin: auto 0 
         font-size: 14px
         font-weight: 300
         z-index: 10
         @include flexbox
         align-items: center
-        color: #828282
+        color: $color-gray
   &-input
     height: 60px
     width: 100%
     border-radius: 0
-    background: #fff
+    background: $color-white
     border: 1px solid #D3D3D3
     padding-left: 30px
     font-size: 14px
     font-weight: 300
     position: relative
     @include placeholder
-      color: #828282
+      color: $color-gray
     &-date
       padding-left: 60px
       -webkit-appearance: none
       -moz-appearance: none
-      background: #fff url(../img/svg/input-date.svg) no-repeat left 30px center
+      background: $color-white url(../img/svg/input-date.svg) no-repeat left 30px center
       &::-webkit-calendar-picker-indicator
         background: transparent
         bottom: 0
@@ -97,7 +97,7 @@
         z-index: 15
       &::-webkit-date-and-time-value
         text-align: left
-        color: #000
+        color: $color-black
     &[type=number]
       -moz-appearance: textfield
       &::-webkit-outer-spin-button,
@@ -110,14 +110,14 @@
     max-width: 420px
     display: block
     border-radius: 0
-    background: #fff
+    background: $color-white
     border: 1px solid #D3D3D3
     padding-left: 30px
     font-size: 14px
     font-weight: 300
     padding-top: 20px
     @include placeholder
-      color: #828282
+      color: $color-gray
   &-checkbox
     display: block
     margin-top: 20px
@@ -140,12 +140,12 @@
         width: 12px
         height: 12px
         border: 1px solid #D3D3D3
-        background: #fff
-        box-shadow: inset 0 0 0 2px #fff
+        background: $color-white
+        box-shadow: inset 0 0 0 2px $color-white
 
   &-payment
     padding: 30px
-    background: #fff
+    background: $color-white
     border-radius: 15px
     // box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1)
     border: 1px solid #d3d3d3
@@ -153,7 +153,7 @@
       li
         @include flexbox
         align-items: flex-start
-        color: #828282
+        color: $color-gray
         margin-bottom: 20px
         p
           width: calc(100% - 100px)
@@ -165,12 +165,12 @@
           text-align: right
           font-weight: 600
         &:last-child
-          color: #000
+          color: $color-black
           align-items: center
           p
             width: 50px
           b
-            color: #788e39
+            color: $color-dark-green
             font-size: 24px
             width: calc(100% - 50px)
     .btn-wrap
@@ -190,7 +190,7 @@
       font-weight: 300
       display: none
       &.success
-        color: #67a755
+        color: $color-light-green
       &.error
         color: #E82929
       &.show
@@ -200,7 +200,7 @@
       input
         width: 100%
         height: 58px
-        background: #fff
+        background: $color-white
         border-radius: 58px
         border: 1px solid #d3d3d3
         font-size: 14px
@@ -214,10 +214,10 @@
         border-radius: 58px
         cursor: pointer
         border: 0
-        color: #fff
+        color: $color-white
         font-size: 16px
         font-weight: 600
-        background: #758842
+        background: $color-dark-green
         position: absolute
         top: 0
         right: 0
@@ -237,7 +237,7 @@
   &-item
     padding: 20px
     position: relative
-    background: #fff
+    background: $color-white
     // box-shadow: 0px 0px 37px rgba(0, 0, 0, 0.08)
     border: 1px solid #d3d3d3
     border-radius: 5px
@@ -264,7 +264,7 @@
       li
         margin-top: 10px
         p
-          color: #bdbdbd
+          color: $color-light-gray
           font-weight: 300
         b
           font-weight: 600
@@ -285,7 +285,7 @@
       b
         font-size: 16px
         font-weight: 600
-        color: #788e39
+        color: $color-dark-green
     &__basket
       position: absolute
       top: 10px
@@ -295,7 +295,7 @@
   
   &-total
     padding-top: 20px
-    border-top: 1px solid #788E39
+    border-top: 1px solid $color-dark-green
     @include flexbox
     align-items: flex-start
     margin-top: 25px
@@ -307,7 +307,7 @@
         padding-right: 20px
         font-size: 14px
         font-weight: 300
-        color: #828282
+        color: $color-gray
         margin-top: 5px
       b
         font-weight: 600
@@ -339,12 +339,12 @@
         height: 30px
         width: 125px
         border-radius: 30px
-        border: 1px solid #788E39
+        border: 1px solid $color-dark-green
         font-weight: 600
         @include flexbox
         align-items: center
         justify-content: center
-        color: #788e39
+        color: $color-dark-green
         &::before
           content: ''
           width: 24px
@@ -360,7 +360,7 @@
     margin: 30px 0
     span
       font-size: 36px
-      color: #788e39
+      color: $color-dark-green
       padding-left: 40px
 
   &-comp
@@ -373,16 +373,16 @@
     h4
       font-weight: 600
       font-size: 16px
-      color: #758842
+      color: $color-dark-green
       &.gray
-        color: #828282
+        color: $color-gray
     &__section
       margin-top: 20px
       .hide
         display: none
       &-none
         font-size: 14px
-        color: #bdbdbd
+        color: $color-light-gray
         font-weight: 300
         margin-top: 10px
       &-head
@@ -390,7 +390,7 @@
         align-items: flex-start
       &-info
         font-size: 12px
-        color: #828282
+        color: $color-gray
         font-weight: 300
         margin-left: auto
         padding-top: 4px
@@ -404,7 +404,7 @@
           display: block
           margin-right: 7px
         &:hover
-          color: #788e39
+          color: $color-dark-green
       &-all
         @include flexbox
         flex-direction: column

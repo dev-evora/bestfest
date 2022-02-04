@@ -28,7 +28,7 @@
         margin-right: 10px
         transition: .1s
       &:hover
-        color: #fff
+        color: $color-white
         img
           filter: brightness(0) invert(1)
     &__green a
@@ -76,7 +76,7 @@
   path
     fill: none
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms
-    stroke: #000
+    stroke: $color-black
     stroke-width: 5.5
     stroke-linecap: round
 
@@ -150,7 +150,7 @@
   left: 0
   right: 0
   bottom: 0
-  background: #fff
+  background: $color-white
   overflow: auto
   padding: 140px 0 50px
   display: none
@@ -194,14 +194,14 @@
         content: ''
         border: 3px solid transparent
         border-top: 6px solid $color-black
-        // background: #000
+        // background: $color-black
         margin-left: 20px
         position: relative
         top: 2px
       &.active
-        color: #788e39
+        color: $color-dark-green
         &::after
-          border-top: 6px solid #788E39
+          border-top: 6px solid $color-dark-green
   &__list
     font-size: 14px
     font-weight: 300
@@ -209,10 +209,10 @@
     li
       margin-top: 10px
       &:hover
-        color: #e07496
+        color: $color-pink
         text-decoration: underline
       &.active
-        color: #e07496
+        color: $color-pink
         text-decoration: underline
 
 .fixed

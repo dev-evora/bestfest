@@ -8,14 +8,51 @@
     h2
       font-size: 48px
       font-weight: 300
-    .item
-      width: calc(100% / 4 - 20px)
-      margin-left: 10px
-      margin-right: 10px
+    // .item
+    //   width: calc(100% / 4 - 20px)
+    //   margin-left: 10px
+    //   margin-right: 10px
+    &__arrow
+      position: absolute
+      top: 0
+      bottom: 0
+      width: 36px
+      height: 36px
+      margin: auto 0
+      border-radius: 100%
+      background: $color-white url(../img/svg/catalog-action-arrow.svg) no-repeat center right 9px
+      background-size: 14px auto
+      cursor: pointer
+      z-index: 10
+      transition: .2s
+      box-shadow: 0 0 5px 5px rgba(0,0,0,.15)
+      &-prev
+        left: 0
+        transform: rotate(180deg) translateX(120%)
+        &.swiper-button-disabled
+          transform: rotate(180deg) translateX(120%)
+      &-next
+        right: 0
+        transform: translateX(120%)
+        &.swiper-button-disabled
+          transform: translateX(120%)
+    &__slider
+      overflow: hidden
+      position: relative
+      padding-bottom: 10px
+      &:hover
+        .card-rec__arrow-prev
+          transform: rotate(180deg) translateX(-10px)
+          &.swiper-button-disabled
+            transform: rotate(180deg) translateX(120%)
+        .card-rec__arrow-next
+          transform: translateX(-10px)
+          &.swiper-button-disabled
+            transform: translateX(120%)
   &-tags
     width: 390px
     &__section
-      border-bottom: 1px solid #A5B96E
+      border-bottom: 1px solid $color-green
       padding-top: 15px
       @include flexbox
       align-items: flex-start
@@ -34,7 +71,7 @@
         align-items: flex-start
         margin-right: -30px
         font-size: 14px
-        color: #828282
+        color: $color-gray
         padding-top: 2px
         li
           margin-right: 30px
@@ -42,7 +79,7 @@
   &-wrap
     width: calc(100% - 390px)
     height: 420px
-    background: #fff
+    background: $color-white
     @include flexbox
     align-items: stretch
   &-photo
@@ -61,7 +98,7 @@
     &-time
       font-size: 14px
       position: relative
-      color: #fff
+      color: $color-white
       padding-left: 20px
       font-weight: 300
       margin: 10px
@@ -98,7 +135,7 @@
         left: 0
         width: 365px
         height: 365px
-        background: #fff
+        background: $color-white
         opacity: 0.75
         border-radius: 100%
         z-index: -1
@@ -135,13 +172,14 @@
   &-edit
     margin-top: 20px
     height: 42px
-    border: 1px solid #e07496
-    color: #e07496
+    border: 1px solid $color-pink
+    color: $color-pink
     border-radius: 42px
     @include flexbox
     align-items: center
     padding: 0 15px
     font-size: 14px
+    transition: .2s
     &::before
       content: ''
       display: block
@@ -149,16 +187,22 @@
       height: 22px
       background: url(../img/svg/card-edit.svg) no-repeat
       margin-right: 10px
+      // transition: .2s
+    &:hover
+      background: $color-pink
+      color: $color-white
+      &::before
+        filter: brightness(0) invert(1)
   &-price
     h3
       font-size: 24px
       font-weight: 700
-      color: #67A755
+      color: $color-light-green
     h4
       font-size: 14px
       font-weight: 300
       margin-top: 7px
-      color: #828282
+      color: $color-gray
       text-decoration: line-through
   &-person
     margin-top: 10px
@@ -170,29 +214,29 @@
       width: 100%
       display: block
       font-weight: 600
-      color: #828282
+      color: $color-gray
       margin-bottom: 10px
     h3
       width: 100%
       display: block
       font-weight: 700
       font-size: 32px
-      color: #67a755
+      color: $color-light-green
       margin-top: 15px
     label
       display: block
       text-align: center
       font-size: 14px
-      color: #828282
+      color: $color-gray
       flex: 1
       cursor: pointer
       input
         @include visually-hidden
         &:checked + p
           &::before
-            background: #e07496
+            background: $color-pink
           &::after
-            background: linear-gradient(90deg, #eee 0%, #E07496 50%, #eee 100%)
+            background: linear-gradient(90deg, #eee 0%, $color-pink 50%, #eee 100%)
       p
         position: relative
         padding-top: 17px
@@ -207,8 +251,8 @@
           width: 11px
           height: 11px
           border-radius: 100%
-          background: #fff
-          box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.13), inset 0 0 0 2px #fff
+          background: $color-white
+          box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.13), inset 0 0 0 2px $color-white
         &::after
           content: ''
           position: absolute
@@ -311,8 +355,14 @@
         height: 24px
         background: url(../img/svg/card-service.svg) no-repeat
       p
-        color: #788e39
-        border-bottom: 1px solid #788E39
+        color: $color-dark-green
+        border-bottom: 1px solid $color-dark-green
+      &:hover
+        p
+          color: $color-pink
+          border-bottom: 1px solid $color-pink
+        &::before
+          background: url(../img/svg/card-service-p.svg) no-repeat
 
   &-menu
     &-title
@@ -333,7 +383,7 @@
       h3
         font-weight: 600
         font-size: 16px
-        color: #828282
+        color: $color-gray
     &-total
       border-top: 1px solid #CFCFCF
       padding-top: 20px
@@ -341,7 +391,7 @@
       align-items: center
       p
         font-size: 14px
-        color: #828282
+        color: $color-gray
       b
         font-weight: 600
         display: block
@@ -364,14 +414,14 @@
       p
         font-size: 14px
         font-weight: 300
-        color: #bdbdbd
+        color: $color-light-gray
         margin-top: 20px
     &__col
       width: 100px
       &:last-child
         width: auto
       p
-        color: #bdbdbd
+        color: $color-light-gray
         font-size: 14px
         height: 40px
       b

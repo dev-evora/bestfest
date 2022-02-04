@@ -15,8 +15,8 @@
       width: 120px
       height: 46px
       border-radius: 10px
-      background: #e07496
-      color: #fff
+      background: $color-pink
+      color: $color-white
       font-size: 16px
       font-weight: 600
       display: none
@@ -30,24 +30,24 @@
         left: -6px
         width: 16px
         height: 16px
-        background: #e07496
+        background: $color-pink
         transform: rotate(45deg)
     &__reset
       margin-bottom: 20px
       font-size: 14px
-      color: #828282
+      color: $color-gray
       text-decoration: underline
       text-align: center
       cursor: pointer
     &__item
       border-radius: 50px
-      background: #788e39
+      background: $color-dark-green
       padding: 0 30px
-      color: #fff
+      color: $color-white
       margin-bottom: 20px
       transition: .2s
       &.open
-        background: #a5b96e
+        background: $color-green
         .catalog-sidebar__title-toggle::before
           filter: none
           transform: rotate(0deg)
@@ -82,7 +82,7 @@
         input
           @include visually-hidden
           &:checked + p::before
-            background: #e07496
+            background: $color-pink
         p
           font-size: 14px
           position: relative
@@ -94,7 +94,7 @@
             left: 0
             width: 12px
             height: 12px
-            background: #788e39
+            background: $color-dark-green
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
   &-main
     width: calc(100% - 270px - 55px)
@@ -111,17 +111,35 @@
       position: absolute
       top: 0
       bottom: 0
-      width: 100px
-      background:  url(../img/svg/catalog-action-arrow.svg) no-repeat center right, linear-gradient(-90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
+      width: 36px
+      height: 36px
+      margin: auto 0
+      border-radius: 100%
+      background: $color-white url(../img/svg/catalog-action-arrow.svg) no-repeat center right 9px
+      background-size: 14px auto
       cursor: pointer
       z-index: 10
+      transition: .2s
+      box-shadow: 0 0 5px 5px rgba(0,0,0,.15)
       &-prev
         left: 0
-        transform: rotate(180deg)
+        transform: rotate(180deg) translateX(120%)
+        &.swiper-button-disabled
+          transform: rotate(180deg) translateX(120%)
       &-next
         right: 0
-      &.swiper-button-disabled
-        display: none
+        transform: translateX(120%)
+        &.swiper-button-disabled
+          transform: translateX(120%)
+    &:hover
+      .catalog-action__arrow-prev
+        transform: rotate(180deg) translateX(-10px)
+        &.swiper-button-disabled
+          transform: rotate(180deg) translateX(120%)
+      .catalog-action__arrow-next
+        transform: translateX(-10px)
+        &.swiper-button-disabled
+          transform: translateX(120%)
   &-seo
     margin-top: 35px
     color: #4f4f4f
@@ -136,20 +154,20 @@
       cursor: pointer
       display: block
       padding: 7px 20px 9px
-      border: 1px solid #E07496
-      color: #e07496
+      border: 1px solid $color-pink
+      color: $color-pink
       border-radius: 20px
       font-size: 14px
       margin-right: 20px
       margin-bottom: 20px
       transition: .2s
       &:hover, &.active
-        color: #fff
-        background: #e07496
+        color: $color-white
+        background: $color-pink
       // &.disabled
-      //   border: 1px solid #E07496 !important
-      //   color: #e07496 !important
-      //   background: #fff !important
+      //   border: 1px solid $color-pink !important
+      //   color: $color-pink !important
+      //   background: $color-white !important
   &-top
     @include flexbox
     align-items: center
@@ -160,13 +178,13 @@
       margin-top: 10px
       p
         font-size: 14px
-        color: #828282
+        color: $color-gray
         padding-right: 10px
       select
         border: 0
         border-radius: 0
         background: transparent 
-        color: #828282
+        color: $color-gray
         text-decoration: underline
         font-weight: 600
         cursor: pointer
@@ -197,10 +215,10 @@
     &__menu
       padding: 35px 70px
       background: #b7cc7e
-      border-top: 4px solid #A5B96E
-      border-bottom: 4px solid #A5B96E
+      border-top: 4px solid $color-green
+      border-bottom: 4px solid $color-green
       border-radius: 70px
-      color: #788e39
+      color: $color-dark-green
       @include flexbox
       align-items: center
       justify-content: space-between
@@ -213,11 +231,17 @@
       a
         @include flexbox
         align-items: center
+        &:hover
+          img
+            filter: brightness(0) invert(1)
+          b
+            color: $color-white
+            border-bottom: 1px solid $color-white
       img
         margin-right: 20px
       b
         font-weight: 600
-        border-bottom: 1px solid #788e39
+        border-bottom: 1px solid $color-dark-green
 
 
 .catalog-filter__btn
