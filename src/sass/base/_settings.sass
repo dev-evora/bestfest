@@ -290,3 +290,26 @@ body
       height: 180px
     .item-title
       font-size: 14px
+
+.btn-outline
+  background: transparent
+  border: 2px solid #788E39
+  color: #788e39
+  margin-bottom: 20px !important
+  font-size: 14px
+  font-weight: 300
+  padding: 15px 30px 15px 25px
+  @include flexbox
+  align-items: center
+  &::before
+    content: ''
+    width: 16px
+    height: 16px
+    display: block
+    background: url(../img/svg/order-pdf.svg) no-repeat
+    margin-right: 10px
+  &:hover
+    color: #fff
+    background: #788e39
+    &::before
+      filter: brightness(0) invert(1)
