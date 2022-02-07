@@ -1,0 +1,63 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Контакты' %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2>Контакты</h2>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <div class="contact-content">
+      <ul class="contact-social">
+        <li><a href="#"><img src="img/svg/c-insta.svg" alt=""><b>@bestfest</b></a></li>
+        <li><a href="#"><img src="img/svg/c-vk.svg" alt=""><b>@bestfest</b></a></li>
+      </ul>
+      <div class="contact-time">Мы работаем и отвечаем на звонки каждый день с 9:00 до 20:00.</div>
+      <ul class="contact-list">
+        <li>
+          <b>Телефон</b>
+          <p>
+            <a href="tel:+7 (812) 123-25-25">+7 (812) 123-25-25</a><br>
+            <a href="tel:+7 (812) 123-25-25">+7 (812) 123-25-25</a>
+          </p>
+        </li>
+        <li>
+          <b>E-mail</b>
+          <p><a href="mailto:mail@mail.ru">mail@mail.ru</a></p>
+        </li>
+        <li>
+          <b>Наш адрес</b>
+          <p>Санкт-Петербург,  ул. Химиков, д. 28</p>
+        </li>
+      </ul>
+    </div>
+    <div class="contact-form">
+      <h3>Обратная связь</h3>
+      <form action="#" method="post">
+        <input type="tel" class="masked" placeholder="Телефон" required />
+        <input type="email" placeholder="E-mail" required />
+        <input type="text" placeholder="Контактное лицо" required />
+        <textarea placeholder="Коментарий"></textarea>
+        <label class="popup-checkbox">
+          <input type="checkbox" checked required />
+          <p>Согласие на обработку персональных данных</p>
+        </label>
+        <button class="btn btn-green">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="contact-map">
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A376331a35339da4e112f834e8c9fbf2f195cb5e9a3d36387593aeb4becc9a135&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>
+</section>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+.contact
+  padding-bottom: 60px
+  &-map
+    width: 100%
+    height: 450px
+    overflow: hidden
+  &-content
+    max-width: 600px
+    width: 100%
+  &-social
+    @include flexbox
+    align-items: center
+    li
+      margin-right: 25px
+      a
+        @include flexbox
+        align-items: center
+        padding: 15px
+        border-radius: 40px
+        background: #e0e0e0
+        font-weight: 600
+        padding-right: 30px
+        img
+          margin-right: 15px
+  &-time
+    font-size: 18px
+    margin-top: 60px
+  &-list
+    @include flexbox
+    align-items: flex-start
+    font-weight: 600
+    margin-top: 50px
+    li
+      @include flexbox
+      align-items: flex-start
+      margin-top: 30px
+      &:first-child
+        margin-top: 0
+      b
+        width: 240px
+      p
+        flex: 1
+  &-form
+    position: absolute
+    top: -60px
+    right: 10px
+    width: 450px
+    background: #fff
+    border-radius: 15px
+    padding: 40px
+    h3
+      font-size: 24px
+      font-weight: 300
+      margin-bottom: 25px
+    input, textarea
+      width: 100%
+      margin-bottom: 20px
+      height: 60px
+      border: 1px solid #D3D3D3
+      border-radius: 0
+      font-size: 14px
+      font-weight: 300
+      padding-left: 30px
+      display: block
+    textarea
+      height: 110px
+      padding-top: 20px
+    .btn
+      margin-top: 20px
