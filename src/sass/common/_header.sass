@@ -56,6 +56,24 @@
         margin-right: 25px
         &:last-child
           margin-right: 0
+        a
+          position: relative
+      .badge
+        position: absolute
+        top: -10px
+        right: -10px
+        z-index: 10
+        width: 20px
+        height: 20px
+        background: #fff
+        border-radius: 100%
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        font-size: 11px
+        color: #a5b96e
+        font-weight: 700
+        @include flexbox
+        align-items: center
+        justify-content: center
 
 .burger
   cursor: pointer
@@ -217,3 +235,77 @@
 
 .fixed
   overflow: hidden
+
+.header-search
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  background: #fff
+  z-index: 1002
+  padding: 50px 0
+  display: none
+  &__bg
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 1001
+    background: rgba(0,0,0,.3)
+    display: none
+    cursor: pointer
+  &__close
+    position: absolute
+    top: 0
+    bottom: 0
+    margin: auto 0
+    right: 30px
+    width: 50px
+    height: 50px
+    cursor: pointer
+    opacity: 0.3
+    &::before, &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      margin: auto
+      width: 30px
+      height: 2px
+      background: #000
+    &::before
+      transform: rotate(45deg)
+    &::after
+      transform: rotate(-45deg)
+  form
+    max-width: 600px
+    margin: 0 auto
+    position: relative
+  input
+    width: 100%
+    height: 60px
+    border-radius: 60px
+    background: #f5f5f5
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+    font-size: 14px
+    font-weight: 300
+    padding-left: 45px
+    border: 0
+    color: #000
+    @include placeholder
+      color: #000
+  button
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    width: 60px
+    border-radius: 100% 
+    border: 0
+    font-size: 0
+    cursor: pointer
+    background: transparent url(../img/svg/search.svg) no-repeat center
+    background-size: 20px

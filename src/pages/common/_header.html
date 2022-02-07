@@ -1,3 +1,15 @@
+{# search #}
+<div class="header-search__bg"></div>
+<div class="header-search">
+  <form action="#" method="post">
+    <input type="text" placeholder="Поиск" />
+    <button type="submit">Искать</button>
+  </form>
+  <div class="header-search__close"></div>
+</div>
+{# end search #}
+
+{# header #}
 <header class="header">
   <div class="container">
     <div class="row">
@@ -21,10 +33,10 @@
       <div class="col">
         <div class="header-contact">
           <ul class="header-contact__menu">
-            <li><a href="#" class="icon icon-search"></a></li>
-            <li><a href="#" class="icon icon-fav"></a></li>
-            <li><a href="#" class="icon icon-lk"></a></li>
-            <li><a href="#" class="icon icon-cart"></a></li>
+            <li><a href="javascript:;" class="icon icon-search"></a></li>
+            <li><a href="#" class="icon icon-fav"><div class="badge">11</div></a></li>
+            <li><a href="javascript:;" data-fancybox data-src="#popup-login" class="icon icon-lk"></a></li>
+            <li><a href="#" class="icon icon-cart"><div class="badge">22</div></a></li>
           </ul>
           <a href="tel:+7 (812) 123-45-67" class="header-contact__phone">+7 (812) 123-45-67</a>
         </div>
@@ -32,8 +44,10 @@
     </div>
   </div>
 </header>
+{# end header #}
 
-<section class="header-menu">
+{# dropdown menu #}
+<div class="header-menu">
   <div class="container">
     <div class="header-menu__row">
       <div class="header-menu__sidebar">
@@ -83,4 +97,5 @@
       </div>
     </div>
   </div>
-</section>
+</div>
+{# end dropdown menu #}

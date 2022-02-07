@@ -54,8 +54,9 @@ $(function () {
 	}
 
 	$('.catalog-sidebar__reset').click(function(){
-		$('.catalog-sidebar')[0].reset();
-		$('.catalog-sidebar__btn').hide()
+		$('.catalog-sidebar')[0].reset()
+		if($(window).width() >= 1024) $('.catalog-sidebar__btn').hide()
+		$('.js-range-slider').data("ionRangeSlider").reset()
 	});
 
 	$('.lk-order').click(function(){
@@ -143,6 +144,19 @@ $(function () {
 		$('.builder-sidebar__bg').fadeToggle(300)
 		$('body').toggleClass('hide')
 	})
+
+	$('.icon-search, .header-search__bg, .header-search__close').click(function(){
+		$('.header-search').slideToggle()
+		$('.header-search__bg').fadeToggle(300)
+		$('body').toggleClass('hide')
+	})
+
+	$('.js-range-slider').ionRangeSlider({
+		type: 'double',
+		prettify_enabled: true,
+    prettify_separator: " ",
+		postfix: " р."
+	});
 	
 });
 
@@ -376,9 +390,13 @@ const actionSlider = () => {
 			thumbs: {
 				swiper: thumbs,
 			},
+			autoplay: {
+				delay: 7000,
+				disableOnInteraction: false,
+			},
 		})
 
-		console.log('init swiper')
+		// console.log('init swiper')
 	
 	}
 
@@ -406,7 +424,7 @@ const cateringSlider = () => {
 
 		slideCounter(main, '.catering-format__count')
 
-		console.log('init swiper')
+		// console.log('init swiper')
 		
 	}
 
@@ -430,7 +448,7 @@ const anyKitchenSlider = () => {
 			},
 		})
 
-		console.log('init swiper')
+		// console.log('init swiper')
 		
 	}
 
@@ -467,7 +485,7 @@ const clientSlider = () => {
 			},
 		})
 
-		console.log('init swiper')
+		// console.log('init swiper')
 		
 	}
 
@@ -489,7 +507,7 @@ const reasonEventSlider = () => {
 
 		slideCounter(main, '.reason-event__count')
 
-		console.log('init swiper')
+		// console.log('init swiper')
 
 	}
 
@@ -515,7 +533,7 @@ const catalogActionSlider = () => {
 			},
 		})
 
-		console.log('init swiper')
+		// console.log('init swiper')
 
 	}
 
@@ -548,7 +566,7 @@ const itemSlider = () => {
 
 		})
 
-		console.log('init swiper')
+		// console.log('init swiper')
 	
 	}
 
@@ -567,7 +585,7 @@ const cardPhotoSlider = () => {
 			observeParents: true,
 		})
 
-		console.log('init swiper')
+		// console.log('init swiper')
 		
 	}
 
@@ -608,7 +626,7 @@ const promoSlider = () => {
 			$('.promo-content').attr('class', 'promo-content ' + color)
 		}
 
-		console.log('init swiper')
+		// console.log('init swiper')
 		
 	}
 
@@ -640,7 +658,7 @@ const cardSlider = () => {
 			},
 		})
 
-		console.log('init swiper')
+		// console.log('init swiper')
 
 	}
 

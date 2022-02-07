@@ -2,10 +2,16 @@
 
   <div class="catalog-sidebar__reset">Очистить фильтр</div>
 
-  {# TODO фильтр по цене #}
   <div class="catalog-sidebar__item open">
     <div class="catalog-sidebar__title">Цена</div>
-    
+    <div class="catalog-sidebar__range">
+      <input type="text" class="js-range-slider" name="price" value=""
+        data-min="0"
+        data-max="10000"
+        data-from="0"
+        data-to="10000"
+      />
+    </div>
   </div>
 
   <div class="catalog-sidebar__item open">

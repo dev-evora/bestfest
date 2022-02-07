@@ -1,0 +1,155 @@
+{# 
+  Для вызова используй data-fancybox data-src=""
+  В data-src="" указываешь ID всплывающего окна, вместе с #
+  Например, data-src="#popup-login"
+#}
+
+{# login #}
+<div class="popup" id="popup-login">
+  <h3>Вход в личный кабинет</h3>
+  <form action="#" method="post">
+    <input type="tel" class="masked" placeholder="Телефон" required />
+    <input type="password" placeholder="Пароль" required />
+    <div class="popup-link"><a href="javascript:;" data-fancybox data-src="#popup-forgot">Забыл пароль</a></div>
+    <button class="btn btn-green">Войти в личный кабинет</button>
+    <div class="popup-link popup-link__green"><a href="javascript:;" data-fancybox data-src="#popup-reg">Зарегистрироваться</a></div>
+  </form>
+</div>
+{# end login #}
+
+{# reg #}
+<div class="popup" id="popup-reg">
+  <h3>Регистрация</h3>
+  <form action="#" method="post">
+    <input type="tel" class="masked" placeholder="Телефон" required />
+    <input type="email" placeholder="E-mail" required />
+    <input type="password" placeholder="Пароль" required />
+    <button class="btn btn-green">Зарегистрироваться</button>
+  </form>
+</div>
+{# end reg #}
+
+{# reg success #}
+<div class="popup" id="popup-reg-success">
+  <div class="popup-center"><h4>Вы успешно зарегистрировались</h4></div>
+</div>
+{# end reg success #}
+
+{# forgot #}
+<div class="popup" id="popup-forgot">
+  <h3>Забыл пароль</h3>
+  <form action="#" method="post">
+    <input type="email" placeholder="E-mail" required />
+    <button class="btn btn-green">Восстановить пароль</button>
+  </form>
+</div>
+{# end forgot #}
+
+{# forgot success #}
+<div class="popup" id="popup-forgot-success">
+  <div class="popup-center"><h4>Вам на почту отправлена ссылка для сброса пароля</h4></div>
+</div>
+{# end forgot success #}
+
+{# lead #}
+<div class="popup" id="popup-lead">
+  <h3>Форма заявки</h3>
+  <h4>Пожалуйста заполните форму</h4>
+  <form action="#" method="post">
+    <select>
+      <option selected disabled>Повод мероприятия</option>
+      <option>Повод 1</option>
+      <option>Повод 2</option>
+      <option>Повод 3</option>
+    </select>
+    <label class="order-label order-label-date">
+      <input class="order-input order-input-date" type="date" placeholder="Выберите дату мероприятия">
+      <p>Выберите дату мероприятия</p>
+    </label>
+    <input type="number" placeholder="Количество персон" required />
+    <input type="text" placeholder="Имя" required />
+    <input type="tel" class="masked" placeholder="Телефон" required />
+    <input type="email" placeholder="E-mail" required />
+    <label class="popup-checkbox">
+      <input type="checkbox" checked required />
+      <p>Согласие на обработку персональных данных</p>
+    </label>
+    <button class="btn btn-green">Отправить заявку</button>
+  </form>
+</div>
+{# end lead #}
+
+{# call #}
+<div class="popup popup-pink" id="popup-call">
+  <h3>Обратный звонок</h3>
+  <h4>Мы перезвоним вам в течение часа</h4>
+  <form action="#" method="post">
+    <input type="text" placeholder="Имя" required />
+    <input type="tel" class="masked" placeholder="Телефон" required />
+    <label class="popup-checkbox">
+      <input type="checkbox" checked required />
+      <p>Согласие на обработку персональных данных</p>
+    </label>
+    <button class="btn btn-pink">Заказать обратный звонок</button>
+  </form>
+</div>
+{# end call #}
+
+{# basket #}
+<div class="popup-basket" id="popup-basket">
+  <h2>Товар добавлен в корзину</h2>
+  <div class="popup-basket__row">
+    <div class="popup-basket__main">
+      {# basket item #}
+      <div class="order-item">
+        <img src="img/svg/order-basket.svg" alt="" class="order-item__basket">
+        <img src="img/content/item.jpg" alt="" class="order-item__pic">
+        <div class="order-item__content">
+          <h5>Канапе артишок с подкопченой курицей и болгарским перцем</h5>
+          <ul class="order-item__spec">
+            <li>
+              <p>В порции</p>
+              <b>10 шт.</b>
+            </li>
+            <li>
+              <p>Выход</p>
+              <b>380 г</b>
+            </li>
+            <li>
+              <p>Выход общий</p>
+              <b>380 г</b>
+            </li>
+            <div class="item-count">
+              <div class="item-count__minus">-</div>
+              <input type="number" class="item-count__number" value="1" />
+              <div class="item-count__plus">+</div>
+            </div>
+            <div class="order-item__price"><b>12 030 ₽</b></div>
+          </ul>
+        </div>
+      </div>
+      {# end basket item #}
+    </div>
+    <div class="popup-basket__second">
+      <h4>Итого 3 товара на сумму</h4>
+      <h3>20 540 руб.</h3>
+      <div class="btn-wrap"><a href="#" class="btn btn-green">Перейти в корзину</a></div>
+    </div>
+  </div>
+  <div class="popup-basket__rec">
+    <h2>Вас может заинтересовать:</h2>
+    <div class="card-rec__slider">
+      <div class="card-rec__arrow card-rec__arrow-prev"></div>
+      <div class="card-rec__arrow card-rec__arrow-next"></div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">{% include 'common/item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item.html' %}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{# end basket #}
