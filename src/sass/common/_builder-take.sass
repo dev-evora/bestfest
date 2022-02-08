@@ -2,6 +2,18 @@
   .container
     @include flexbox
     align-items: center
+    z-index: initial
+  &__cube
+    content: ''
+    position: absolute
+    top: -470px
+    left: 630px
+    width: 2100px
+    height: 2100px
+    background: #C4C4C4
+    opacity: 0.14
+    z-index: -4
+    transform: rotate(-31deg)
   &__img
     max-width: initial
     width: 505px
