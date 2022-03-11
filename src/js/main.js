@@ -222,15 +222,17 @@ const gridMenu = () => {
 
 const countItem = () => {
 	$('.item-count').each(function (i, item) {
-		let count = parseInt($('> .item-count__number', item).val());
+		let min = parseInt($('> .item-count__number', item).attr('data-min'));
+		$('> .item-count__number', item).val(min);
+		let val = $('> .item-count__number', item).val();
 		$('> .item-count__minus', item).click(function () {
-			if (count == 0) return;
-			count--;
-			$('> .item-count__number', item).val(count);
+			if (val >= min) return;
+			min--;
+			$('> .item-count__number', item).val(min);
 		});
 		$('> .item-count__plus', item).click(function () {
-			count++;
-			$('> .item-count__number', item).val(count);
+			min++;
+			$('> .item-count__number', item).val(min);
 		});
 	});
 }
